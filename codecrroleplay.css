@@ -1,0 +1,36 @@
+#codecrroleplay {
+    max-width: 600px;
+    height:auto;
+    background-color: #eff1ea;
+    padding:30px 25px 60px;
+    margin:auto
+    }
+.topmaincrroleplay {
+    max-width:600px ;
+    height: 215px;
+    background: url(https://iili.io/FlbEBFs.png) 50% 50%/cover
+    }
+.boxtextcrrole {
+    width:80%;
+    padding:0px 15px;
+    margin:auto;
+    color: #636363;
+    font-family: K2D, sans-serif;
+    font-size: 16px
+    }
+.mainboxrrolecr {
+    text-align:justify;
+    line-height: 1.5;
+    padding:0px 15px
+    }
+.notetextcrrole {
+    display:flex;
+    flex-direction: row-reverse;
+    max-width:100%
+    }
+.orangecatcr {
+    width: 180px;
+    height: 180px;
+    background: url(https://iili.io/FlDAXSt.png) 50% 50%/cover;
+    transform: translate(-3rem, 12rem);
+    }
