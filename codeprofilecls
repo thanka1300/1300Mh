@@ -1,0 +1,170 @@
+#mainboxprofilecls {
+    box-sizing: content-box;
+    width: 550px;
+    height: 775px;
+    background: url(https://iili.io/FWS4FY7.jpg) 50% 50%/cover;
+    margin: 120px auto 50px;
+    }
+
+
+.boxpolariod1cls {
+    box-sizing: content-box;
+    width: 150px;
+    height:220px;
+    background-color:#f2f3f3;
+    transform: translate(22rem, 1rem) rotate(6deg);
+    box-shadow: -5px 3px 8px rgba(90, 80, 80, 50%);
+    padding:10px;
+    }
+
+
+.element001 {
+    width: 30px;
+    height: 30px;
+    background: url(https://iili.io/FWzntUB.png) 50% 50%/cover;
+    transform: translate(-0.5rem, -12.5rem)
+    }
+
+
+.element002 {
+    width:50px;
+    height: 50px;
+    background: url(https://iili.io/FWzodiv.png) 50% 50%/cover;
+    transform: translate(7rem, -4rem)
+    } 
+ 
+.boxmusicplaycls {
+    box-sizing: content-box;
+    width: 200px;
+    height:60px;
+    background-color:#f8f4f1;
+    border-radius:10px;
+    margin:0 auto;
+    border: 2px solid #e8b8c6;
+    padding:5px 0px;
+    transform: translate(13rem, -1rem) rotate(6deg)
+    }
+
+
+.textboxmusiccls {
+    font-size:19px;
+    color: #eea1c1;
+    font-family: Jua, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 0
+    }
+
+
+.iconheartmusic {
+    width:20px;
+    height:20px;
+    background: url(https://iili.io/FWUBHns.png) center/cover;
+    margin :0px 70px 0px 10px;
+    display: inline-block;
+    transform: translate(0rem, 0.2rem)
+    }
+.solidlinesong {
+    width: 100%;
+    height: 2px;
+    background: #e8b8c6;
+    margin-top:10px
+    }
+    
+.textnamemusic {
+    font-size:14px;
+    font-family: Single Day, cursive;
+    font-weight: 400;
+    color: #7d6269;
+    font-style: normal;
+    text-align:center;
+    margin-top:3px}
+
+
+.flexboxpolariod23cls {
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    transform: translate(-0rem, -5rem)
+    }
+
+
+.boxpolariod2cls {
+    box-sizing: content-box;
+    width: 240px;
+    height:330px;
+    background-color:#f2f3f3;
+    transform: translate(3rem, 0rem) rotate(3deg);
+    box-shadow: -5px 3px 8px rgba(90, 80, 80, 50%);
+    padding:10px
+    }
+
+
+.element003 {
+    width: 250px;
+    height: 250px;
+    background: url(https://iili.io/FWznpOF.png) 50% 50%/cover;
+    transform: translate(-10rem, -27rem)
+    }
+
+
+.element004 {
+    width: 80px;
+    height: 80px;
+    background: url(https://iili.io/FWzo3fR.png) 50% 50%/cover;
+    transform: translate(-2.5rem, -19rem)
+    }
+
+
+.boxpolariod3cls {
+    box-sizing: content-box;
+    width: 280px;
+    height:280px;
+    background-color:#f2f3f3;
+    transform: translate(2rem, 5rem) rotate(-8deg);
+    box-shadow: -5px 3px 8px rgba(90, 80, 80, 50%);
+    padding:10px
+    }
+
+
+.textpolariod02 {
+    font-size: 22px;
+    color: #7d6269;
+    text-align:  center ;
+    font-family: Single Day, cursive;
+    margin-top:8px
+    }
+
+
+.element005 {
+    width: 100px;
+    height: 100px;
+    background: url(https://iili.io/FWznmR1.md.png) 50% 50%/cover;
+    transform: translate(1.5rem, -23rem)
+    }
+
+
+.element006 {
+    width: 90px;
+    height: 90px;
+    background: url(https://iili.io/FWzoHxa.png) 50% 50%/cover;
+    transform: translate(-4rem, -13rem)
+    }
+
+
+.element007 {
+    width: 100px;
+    height: 100px;
+    background: url(https://iili.io/FWznbHP.png) 50% 50%/cover;
+    transform: translate(-2rem, -16rem)
+    }
+.element008 {
+    width: 70px;
+    height: 70px;
+    background: url(https://iili.io/FWznyDg.png) 50% 50%/cover;
+    transform: translate(13rem, -22rem)
+    }
