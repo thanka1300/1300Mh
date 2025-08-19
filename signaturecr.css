@@ -1,0 +1,25 @@
+#maindesigncr {
+    width: 500px;
+    height: 230px;
+    background-color: #eff1ea;
+    margin: auto;font-family: "REM", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal; 
+    text-transform: uppercase;
+}
+.GradientLEDCR {
+    background: url(https://64.media.tumblr.com/6f4de73278868970235daeeb41157c1f/1592a634a31fd01e-f9/s400x600/0d52e4399d8dd90f0d5f650fd8c0619a8982489d.gif) 50% 0%/cover;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+}
+.barcodecr {
+    width: 47px;
+    height: 120px;
+    background: url(https://64.media.tumblr.com/be40eae5d479ef347e4cbd884895280b/tumblr_oz8xtmF8Il1uzwgsuo1_400.gif) 50% 50%/cover;
+    margin:auto;
+    transform: translate(13rem, -8.5rem);padding:5px 0px 0px 5px;writing-mode:vertical-lr;
+    font-family: "Libre Barcode 128", system-ui; font-weight: 400;
+    font-style: normal;
+    font-size: 60px;color:#231f38;
+}
