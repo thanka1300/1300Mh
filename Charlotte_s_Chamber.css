@@ -31,7 +31,7 @@
 }
 .Croom_main {
   max-width:650px;
-  height:770px;
+  height:auto;
   background-color:#f0edeb;
   border:1px solid #464646;
   padding:30px 25px;
@@ -74,3 +74,14 @@
   text-align:center;
   text-transform:uppercase
 }
+.Croomimagesmall {
+  width:130px;
+  height:170px;
+  margin:0px auto 30px;
+}
+.Croomimagebig {
+  width:500px;
+  height:770px;
+  margin-left:30px;
+}
+
