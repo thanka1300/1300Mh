@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+#body_charcham {
+  max-width:680px;
+  height:55px;
+  background-color:#f0edeb;
+  border:1px solid #464646;
+  padding:5px 10px;
+  margin:auto;
+}
+.charicon3 {
+  width:150px;
+  height:50px;
+  background:url(https://iili.io/KY7nxv1.png)50% 80%/cover;
+  margin:auto
+}
+.charflextop {
+  max-width:100%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+.char_name {
+  width:80%;
+  font-size:30px;
+  color:#31314b;
+  font-family:Barlow, bold;
+  text-align:center;
+  text-transform:uppercase
+}
+.char_main {
+  max-width: 650px;
+  height:auto;
+  background-color:#f0edeb;
+  border:1px solid #464646;
+  padding:30px 25px;
+  margin:auto
+}
+.char_flexmainout {
+  max-width:100%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  align-items:flex-start
+}
+.char_flexin {
+  max-width:130px;
+  height:400px;
+  display:flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
+  align-items:center;
+  justify-content:flex-start;
+}
+.char_text {
+  width:100%;
+  color:#636363;
+  font-family: Chakra Petch, sans-serif;
+  font-size: 16px;
+  text-align:justify;
+  margin:auto;
+}
+.char_note {
+  max-width: 670px;
+  height:40px;
+  background-color:#f0edeb;
+  border:1px solid #464646;
+  margin:auto;
+  font-size:16px;
+  color:#31314b;
+  font-family:Chakra Petch, sans-serif;
+  text-align:right;
+  padding:5px 15px 0px
+}
+.charimagesmall {
+  width:130px;
+  height:170px;
+  margin:0px auto 30px;
+}
+.charimagebig {
+  width:700px;
+  height:370px;
+  margin-left:30px
+}
