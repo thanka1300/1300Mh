@@ -46,7 +46,7 @@
 }
 .Croom_flexin {
   max-width:130px;
-  height:400px;
+  height:800px;
   display:flex;
   flex-direction:column;
   flex-wrap:nowrap;
