@@ -39,7 +39,7 @@
   height:80px;
   border:2px solid #0e0e0e;
   border-radius:20px;
-  ;background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1), rgba(0,0,0,0.0)), var(--delphoto) 40% 0%/cover
+  ;background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1), rgba(0,0,0,0.0)), var(--delphoto);var(--delsize);var(--delposition);
 }
 
 .del_box_text {
