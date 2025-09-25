@@ -1,0 +1,80 @@
+#maincloudbox {
+    max-width: 80%;
+    background-image:linear-gradient(to bottom , rgba(19, 19, 19,1), rgba(127, 37, 255, 44%), rgba(19, 19, 19,1)) , url(https://i.imgur.com/HcyB9Sf.jpeg);
+    background-size:100%;
+    border-width: 2px;
+    border-style: solid;
+    border-image:linear-gradient( to bottom, rgba(255,244,197,0) 0%, rgba(255,205,100,1) 50%, rgba(255,244,197,0)) 1 100%;
+    padding:20px;
+    margin:20px auto;
+}
+.fontcloudbox {
+    font-size: 16px;color: #dcdcdc;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-align:justify;
+    line-height: 1.5;
+}
+.flexcloud1 {
+    display: flex;
+    align-items: top;
+    margin:50px auto
+}
+.flexcloud2 {
+    width: 200px;
+    display: flex;
+    align-items: top;
+    flex-direction: column
+}
+.boxcloudflex2 {
+    width: 200px;
+    height:200px;
+    background:url();
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    margin:0px auto
+}
+.cloudname01 {
+    text-align:center;
+    color:#ffcd64;
+    font-size:30px;
+    font-family: 'ital';
+    text-transform: uppercase
+}
+.cloudfamilyname {
+    text-align:center;
+    font-size:12px;
+    font-family: 'ital';
+    text-transform: uppercase
+}
+.boxboxcloud {
+    width: 130px;
+    height:25px;
+    background:url()
+    background-size:cover;
+    border-radius:5px;
+    box-shadow: 0px 0px 4px rgba(19, 19, 19,0.7);
+    margin: 20px auto 0;
+    font-family: 'ital';
+    font-size: 13px;
+    text-align:center;
+    padding-top:105px
+}
+.boxringcloud {
+    width: 130px;
+    height:25px;
+    background:url()
+    background-size:cover;
+    border-radius:5px;
+    box-shadow: 0px 0px 4px rgba(19, 19, 19,0.7);
+    margin: 20px auto 0;
+    font-family: 'ital';
+    font-size: 13px;
+    text-align:center;
+    padding-top:105px
+}
+.boxrolecloud {
+    width:80%;
+    background: rgba(0, 0, 0, 0.5);
+    margin:0px 0px 0px 25px;
+    padding:25px;
+    border-radius:10px
+}
