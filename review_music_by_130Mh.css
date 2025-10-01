@@ -15,7 +15,7 @@
 
 .Musicfelx1 {
   width:550px;
-  display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;
+  display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;
   margin:0px auto 20px;
 }
 
