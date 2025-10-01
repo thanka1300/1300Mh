@@ -33,10 +33,12 @@
   font-family:'Ramabhadra',sans-serif;
 }
 .namemu {
+  width:390px;
   font-size:18px;
   color:#dcdcdc;
 }
 .sigmu {
+  width:390px;
   font-size: 13px;
   color:#787878;
 }
