@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ramabhadra&display=swap');
+
+#Musicbox {
+  max-width:600px;
+  min-height:500px;
+  background:linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.37);
+  padding:50px 25px;
+  margin: 30px auto 10px;
+}
+
+.Musicfelx1 {
+  max-width:550px;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:center;
+  align-items:center;
+  margin:0px auto 20px;
+}
+
+.imagemusic {
+  width:70px;
+  height:70px;
+  background:var(--imagemu) var(--positionmu)/var(--sizemu);border-radius:50px;
+}
+
+.boxnamemu {
+  width:390px;
+  padding:10px;
+  margin-left:10px;
+  font-family:'Ramabhadra',sans-serif;
+}
+.namemu {
+  font-size:18px;
+  color:#dcdcdc;
+}
+.sigmu {
+  font-size: 13px;
+  color:#787878;
+}
+.dotmu {
+  width:50px;
+  border-radius:25px 0px 0px 25px;
+  writing-mode:sideways-rl;
+  text-align:center;
+  padding-left:5px;
+  color:#636363;
+}
+.namesong {
+  font-size:28px;
+  color:#ededed;
+  font-weight:bold;
+  font-family:'Bai Jamjuree',sans-serif;
+  margin:30px auto;
+  text-align:center;
+}
+.textsong {
+  color:#cacaca;
+  font-family:'Bai Jamjuree',sans-serif;
+  font-size:16px;
+  text-align:justify;
+  padding:20px;margin:auto;
+}
+.linebox {
+  width:550px;
+  height:2px;
+  background-color:#cacaca;
+  border-radius:100px;
+  margin:10px auto 35px;
+}
+.flexboxapp {
+  width:400px;
+  background-color:rgba(255, 255, 255, 0.2);
+  backdrop-filter:blur(10px);
+  border-radius: 25px;
+  padding:15px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align:center;
+  max-width:400px;
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin:0px auto;
+}
+.appspf {
+  width:70px;
+  height:70px;
+  background:url(https://cdn.jim-nielsen.com/ios/512/spotify-music-2015-07-30.png?rf=1024) 50% 10%/cover;
+  border-radius:15px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.appyt {
+  width:70px;
+  height:70px;
+  background:url(https://iili.io/KMMG2a9.png) 50% 50%/cover;
+  border-radius:15px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.appamu {
+  width:70px;
+  height:70px;
+  background:url(https://cdn.jim-nielsen.com/ios/512/apple-music-2020-09-25.png?rf=1024) 50% 50%/cover;
+  border-radius:15px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.130Mhcd {
+  font-size:12px;
+  font-family:'Bai Jamjuree',sans-serif;
+  color:#717171;
+  text-align:center
+}
