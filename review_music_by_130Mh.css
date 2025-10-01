@@ -14,18 +14,15 @@
 }
 
 .Musicfelx1 {
-  max-width:550px;
-  display:flex;
-  flex-wrap:nowrap;
-  justify-content:center;
-  align-items:center;
+  width:550px;
+  display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;
   margin:0px auto 20px;
 }
 
 .imagemusic {
   width:70px;
   height:70px;
-  background:var(--imagemu) var(--positionmu) / var(--sizemu);
+  background: var(--imagemu) var(--positionmu) / var(--sizemu);
   border-radius:50px;
 }
 
