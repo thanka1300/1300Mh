@@ -99,7 +99,7 @@
 .appyt {
   width:70px;
   height:70px;
-  background:url(https://iili.io/KMMG2a9.png) 50% 50%/cover;
+  background:url(https://upload.wikimedia.org/wikipedia/commons/6/62/YouTube_social_white_square_%282024%29.svg) 50% 50%/cover;
   border-radius:15px;
   border:1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -117,4 +117,8 @@
   font-family:'Bai Jamjuree',sans-serif;
   color:#717171;
   text-align:center;
+}
+
+.musicframe {
+  
 }
