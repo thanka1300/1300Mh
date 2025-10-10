@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+#MDCR1 {
+  max-width:600px;
+  margin:auto;
+}
+
+.MDCRflexmain {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  align-items:flex-start;
+}
+
+.MDCRflexsup {
+  width:60px;
+  display:flex;
+  flex-direction:column;
+  margin-top:150px;
+}
+
+.MDCRflexsup1 {
+  width:70px;
+  height:120px;
+  background:#6b2828;
+  border-radius:25px 0px 0px 25px;
+  writing-mode:sideways-lr;
+  text-align:center;
+  padding-left:5px;
+}
+
+.MDCRflexsup2 {
+  width:70px;
+  height:120px;
+  background:#A71717;
+  border-radius:25px 0px 0px 25px;
+  writing-mode:sideways-lr;
+  text-align:center;padding-left:5px;
+  margin:20px 0px
+}
+
+.MDCRmainbox {
+  max-width:550px;
+  height:auto;
+  background-color:#f3f3ff;
+  padding:0px 20px 20px;
+  margin:6rem auto 0px;
+  box-shadow:-18px -18px #6b2828
+}
+
+.MDCRPF {
+  max-width:500px;
+  display:flex;
+  align-items:center;
+  align-content:center;
+  flex-direction:row-reverse;
+  margin:-6rem 0% 0px 15%;
+}
+
+.MDCRZONE {
+  max-width:130px;
+  height:10px;
+  background-color:#A71717;
+  border-radius:100px;
+  padding:5px 15px 30px;
+  margin:0px 10px 0px 25px;
+}
+
+.MDCRimage1 {
+  width:120px;
+  height:120px;
+  background:Var(--MDCRIMAGE1) Var(--MDCRIMAGE1)/Var(--MDCRIMAGESIZE1);
+  border:5px solid #A71717;
+  border-radius: 100%;
+}
+
+.MDCRFlexpr {
+  max-width:100%;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:space-around;
+}
+
+.MDCRimage2 {
+  width:60px;height:90px;
+  background:Var(--MDCRIMAGE2) Var(--MDCRIMAGE2)/Var(--MDCRIMAGESIZE2);
+  border-radius:10px;
+}
+  
+.MDCRflexmain2 {
+  width: 400px;
+  padding:10px 0px
+}
+
+.MDCRTEXT {
+  font-size:18px;
+  text-align:justify;
+  color:#636363;
+  margin-left:20px;
+}
+
+.MDCRNAME {
+  color:#6b2828;
+  text-transform:uppercase;
+  font-weight: bold;
+}
+
+.MDCRDOT {
+  width:30px;
+  writing-mode:sideways-lr;
+  text-align:center;
+  color:#636363;
+}
+
+.MDCRmaintextr {
+  max-width:560px;
+  min-height:200px;
+  color:#636363;
+  font-family:'Bai Jamjuree', sans-serif;
+  font-size:16px;
+  text-align:justify;
+  border-style:none none none solid;
+  border-width: 3px;
+  border-color:#6b2828;
+  padding:20px;
+  margin:20px auto 0px;
+}
+
+.MDCRFALXICON1 {
+  max-width:100%;
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+}
+
+.MDCRICON1 {
+  width:120px;
+  height:32px;
+  background:url(https://iili.io/KwkwGgS.png)50% 50%/cover;
+}
+
+.MDCRFALXICON2 {
+  max-width:130px;
+  display:flex;
+  align-items:center;
+  align-content:center;
+}
+
+.MDCRICON2 {
+  width:32px;
+  height:32px;
+  background:url(https://iili.io/KwkDnfV.png) 50% 50%/80% no-repeat;
+  border:1px solid #636363;
+  border-radius:10px;
+}
+
+.MDCRup {
+  font-size:18px;
+  text-align:justify;
+  color:#636363;
+  border:1px solid #636363;
+  border-radius:10px;
+  padding:0px 10px;
+  margin-left:10px;
+}
+
+.MDCRnote {
+  display:flex;
+  flex-direction:row-reverse;
+  max-width:100%;
+  margin-top:20px;
+}
+
+.MDCRtextnote {
+  width:520px;
+  min-height:30px;
+  background:#a71717;
+  color:#ffffff;
+  font-family:'Bai Jamjuree', sans-serif;
+  font-size:16px;text-align:justifyl;
+  padding:10px;margin-left:auto
+}
