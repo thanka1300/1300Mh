@@ -210,9 +210,70 @@
   color:#424242;
   margin:5px auto 0px
 }
+
 .MDXYPLTAG {
   width:130px;
   height:35px;
   margin:0px auto;
   background: url(https://iili.io/KeiGAlf.png) 50% 50%/cover;
+}
+
+.MDXYPOPUPMAIN {
+  width: 250px;
+  min-height: 230px;
+  background: linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%);
+  margin:auto;padding-bottom:20px;
+  transform:translate(13rem, -30rem);
+}
+
+.MDXYPUMIM {
+  width:70px;
+  height:70px;
+  margin:20px auto 10px;
+  box-shadow:-1px 3px 6px 2px #6a6969;
+  border: 5px solid #ffffff;
+  border-radius:20px;
+  background:var(--MDXYPOPIM);
+}
+
+.MDXYPUMTOPIC {
+  font-size:12px;
+  color:#3e3e3e;
+  font-weight:bold;
+  font-family:'Bai Jamjuree',sans-serif;
+  margin:5px auto;
+  text-align:center;
+}
+.MDXYPUMTEXT {
+  color:#0c0c0c;
+  font-family:'Bai Jamjuree',sans-serif;
+  font-size:10px;
+  text-align:justify;
+  padding:0px 10px;
+  margin:auto;
+}
+.MDXYBBOX {
+  width:160px;
+  height:15px;
+  background-color: rgb(55 146 237 / 84%);
+  border-radius:5px;padding:5px 15px 10px;
+  box-shadow:inset 0px -3px 6px 0px rgb(25 72 131 / 39%);
+  border:1px solid rgba(255, 255, 255, 0.3);
+  margin:10px auto;font-size:12px;
+  text-align:center  
+}
+.MDXYGBOX {
+  width:160px;
+  height:15px;
+  background-color:rgb(131 131 131 / 60%);
+  border-radius:5px;padding:5px 15px 10px;
+  box-shadow: inset 0px -3px 6px 0px rgb(80 80 80 / 34%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin:10px auto;
+  font-size:12px;
+  text-align:center;
 }
