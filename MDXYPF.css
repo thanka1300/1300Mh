@@ -75,7 +75,7 @@
     .MDXYBARFLEXCIRCLE {
       width:20px;
       height:20px;
-      background:var(--circlecolor)
+      background:var(--circlecolor);
       border-radius:100px;
       margin:auto;
  }
