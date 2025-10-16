@@ -40,7 +40,7 @@
 .CIRCLECOLORTAG {
   width:12px;
   height:12px;
-  border-radius: ช50%;
+  border-radius: 50%;
   border:1px solid rgba(0, 0, 0, 0.1);
   background-color:var(--circlecolor)
 }
@@ -65,20 +65,20 @@
   flex-wrap:nowrap;
   flex-direction:row;
   margin:auto;
-
+}
   .MDXYBARFLEX2 {
     width:100px;
     height:30px;
     display:flex;
     align-items:center;
-
+  }
     .MDXYBARFLEXCIRCLE {
       width:20px;
       height:20px;
       background:var(--circlecolor)
       border-radius:100px;
       margin:auto;
-
+ }
       .MDXYBARNAME {
         width:355px;
         font-family:'Dongle', sans-serif;
@@ -88,10 +88,7 @@
         font-size: 23px;text-align:center;
         line-height:1;
         color:#424242;
-      }
-    }
-  }
-}
+ }
 
 .MDXYIMAGEFLEXMAIN {
   max-width:98%;
@@ -101,7 +98,7 @@
   align-items:flex-start;
   justify-content:space-around;
   margin:20px auto 0px;
-
+ }
   .MDXYIMAGEFLEXCOLUMN {
     max-width:100px;
     height:430px;
@@ -109,21 +106,21 @@
     flex-direction:column;
     flex-wrap:nowrap;
     justify-content:center;
-
+ }
   .MDXYIMCOLUMN1 {
     width:90px;
     height:130px;
     margin:0px auto 10px;
     box-shadow:0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
     background:var(--MDXYIMCOSHOW);
-      
+   }    
       .MDXYIMCOLUMN2 {
         width:90px;
         height:130px;
         margin:10px auto;
         box-shadow:0px 0px 0px 2px #fafafa;
         background:var(--MDXYIMCO);
-        
+    }     
         .MDXYIMMAIN {
           width:300px;
           height:430px;
@@ -131,10 +128,6 @@
           box-shadow:-25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
           background:var(--MDXYIMCOSHOW);
         }
-      }
-    }
-  }
-}
 
 .MDXYFACEID {
   width:80px;
