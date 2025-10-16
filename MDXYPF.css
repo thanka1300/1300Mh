@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Dongle&display=swap');
 
 :root {
-  --MDXYIMCOSHOW: Gray
+  --MDXYIMCOSHOW:BLUE
+  --MDXYIMCO:GREEN
+  --MDXYMUSICIM:RED
 }
 
 #MDXYCOMTEXT{
@@ -142,5 +144,75 @@
   transform:translate(-15.5rem, -29rem)
 }
 
+.MDXYMUBOX {
+  width:150px;
+  min-height:200px;
+  background:linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius:15px;
+  box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%);
+  margin:auto;
+  transform:translate(17rem, -33rem);
+ }
 
-  
+.MDXYMUBAR {
+  max-width:130px;
+  height:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap:nowrap;
+  flex-direction:row;
+  margin:auto;
+}
+
+.MDXYMUCIRFLEX {
+  width:35px;
+  height:10px;
+  display:flex;
+  align-items:center;
+}
+
+.MDXYMUCIR {
+  width:8px;
+  height:8px;
+  background:var(--circlecolor);
+  border-radius:100px;
+  margin:auto;
+}
+
+.MDXYMUMI {
+  width:100px;
+  font-weight:700;
+  font-style:normal;
+  text-transform:uppercase;
+  font-size:7px;
+  line-height:1;
+  color: #424242;
+  margin-left:20px;
+}
+
+.MDXYIMMU {
+  width:130px;
+  height:130px;
+  margin:0px auto;
+  background:var(--MDXYMUSICIM);
+}
+
+.MDXYSONA {
+  width:100px;
+  font-weight:500;
+  font-style:normal;
+  text-align:center;
+  font-size:7px;
+  line-height:1;
+  color:#424242;
+  margin:5px auto 0px
+}
+.MDXYPLTAG {
+  width:130px;
+  height:35px;
+  margin:0px auto;
+  background: url(https://iili.io/KeiGAlf.png) 50% 50%/cover;
+}
