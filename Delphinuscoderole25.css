@@ -72,7 +72,7 @@
 }
 .Del25textrole {
   width:100%;
-  margin:20px 0px;
+  margin-top:20px
   font-family:'Bai Jamjuree', sans-serif;
   font-weight:400;
   font-style:normal;
@@ -84,5 +84,6 @@
 .Del25note {
   background:#1f3350;
   color:#fff;
-  padding:5px
+  padding:5px;
+  margin-top:20px;
 }
