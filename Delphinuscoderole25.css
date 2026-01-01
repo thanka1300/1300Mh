@@ -76,12 +76,13 @@
   font-family:'Bai Jamjuree', sans-serif;
   font-weight:400;
   font-style:normal;
-  font-size: 16px;
+  font-size:16px;
   line-height:1.8;
   color:#2b4265;
   text-align:justify;
 }
 .Del25note {
+  text-align:center;
   background:#1f3350;
   color:#fff;
   padding:5px;
