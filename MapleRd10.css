@@ -40,7 +40,6 @@
 .Mapleig1 {
   width:200px;
   height:200px;
-  background:url(https://pbs.twimg.com/media/G9-b7QabcAclQRG?format=jpg&name=large) 50% 50%/cover no-repeat;
   border:3px solid #fff;
   transform:translate(2rem, -0rem) rotate(-19deg);
   filter:drop-shadow(0 0 0.75rem #131313);
@@ -49,7 +48,6 @@
 .Mapleig2 {
   width: 220px;
   height: 220px;
-  background:url(https://pbs.twimg.com/media/G9-b7QdbAAAo3lc?format=jpg&name=large) 50% 50%/cover;
   border: 3px solid #fff;
   position: relative;
   z-index: 10;filter: drop-shadow(0 0 0.75rem #131313);
@@ -58,7 +56,6 @@
 .Mapleig3 {
   width:200px;
   height:200px;
-  background: url(https://pbs.twimg.com/media/G9-b7QabcAMbnuI?format=jpg&name=large) 50% 50%/cover no-repeat;
   border: 3px solid #fff;
   transform: translate(-2rem, -0rem) rotate(19deg);
   filter: drop-shadow(0 0 0.75rem #131313);
