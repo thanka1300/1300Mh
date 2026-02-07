@@ -3,7 +3,6 @@
 #Maplerd10main {
   max-width:950px;
   height:250px;
-  background: url(https://i.pinimg.com/736x/6d/b0/5b/6db05b9e437c7ec25a3695963e95c9aa.jpg) 50% 0%/cover;
   margin:auto;
 }
 
@@ -18,14 +17,12 @@
 
 .nametag {
   font-size:18px;
-  color:#b9b9b9;
   font-weight:500;
   font-family:Chakra Petch, sans-serif;
 }
 
 .datetag {
   font-size:18px;
-  color:#b9b9b9;
   font-weight:500;
   font-family: Chakra Petch, sans-serif;
 }
@@ -44,7 +41,6 @@
   width:200px;
   height:200px;
   background:url(https://pbs.twimg.com/media/G9-b7QabcAclQRG?format=jpg&name=large) 50% 50%/cover no-repeat;
-  filter:grayscale(20%);
   border:3px solid #fff;
   transform:translate(2rem, -0rem) rotate(-19deg);
   filter:drop-shadow(0 0 0.75rem #131313);
@@ -59,7 +55,7 @@
   z-index: 10;filter: drop-shadow(0 0 0.75rem #131313);
 }
 
-.Mapleig1 {
+.Mapleig3 {
   width:200px;
   height:200px;
   background: url(https://pbs.twimg.com/media/G9-b7QabcAMbnuI?format=jpg&name=large) 50% 50%/cover no-repeat;
@@ -94,7 +90,7 @@
   text-align:center;
 }
 
-.iineheight {
+.lineheight {
   width:2px;
   height:50px;
   background:#636363;
