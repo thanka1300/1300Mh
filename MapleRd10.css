@@ -38,27 +38,27 @@
   margin:0 auto
 }
 .Mapleig1 {
-  width:200px;
-  height:200px;
+  width:22%;
   border:3px solid #fff;
   transform:translate(2rem, -0rem) rotate(-19deg);
   filter:drop-shadow(0 0 0.75rem #131313);
+  aspect-ratio: 1/1;
 }
 
 .Mapleig2 {
-  width: 220px;
-  height: 220px;
+  width:25%;
   border: 3px solid #fff;
   position: relative;
   z-index: 10;filter: drop-shadow(0 0 0.75rem #131313);
+  aspect-ratio: 1/1;
 }
 
 .Mapleig3 {
-  width:200px;
-  height:200px;
+  width:22%;
   border: 3px solid #fff;
   transform: translate(-2rem, -0rem) rotate(19deg);
   filter: drop-shadow(0 0 0.75rem #131313);
+  aspect-ratio: 1/1;
 }
 
 .Maplepaper {
