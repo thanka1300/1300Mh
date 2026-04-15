@@ -3,6 +3,7 @@
 #Maplerd10main {
   max-width:950px;
   height:250px;
+  border-radius:15px 15px 0px 0px;
   margin:auto;
 }
 
@@ -117,6 +118,7 @@
 .maplebot {
   max-width: 950px;
   height: 40px;
+  border-radius:0px 0px 15px 15px;
   padding-top:10px;
   margin:auto;
   font-family:Chakra Petch, sans-serif;
