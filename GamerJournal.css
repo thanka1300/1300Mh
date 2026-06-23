@@ -35,34 +35,34 @@
 .g-m30 { margin: 30px auto; }
 
 
-.event-spoiler summary,
-.event-spoiler summary::marker,
-.event-spoiler summary::-webkit-details-marker {
+.sp summary,
+.sp summary::marker,
+.sp summary::-webkit-details-marker {
     list-style: none;
     display: block;
     cursor: pointer;
 
-  .event-spoiler-title {
-    background: #09081b; /* สีเดียวกับกล่องเนื้อหาด้านใน */
-    color: var(--event-accent); /* ดึงสีทองมาใช้ */
+  .sp-t {
+    background: #09081b;
+    color: var(--event-accent);
     font-family: 'Noto Sans Thai', sans-serif;
     font-size: 20px;
     font-weight: bold;
     padding: 15px 25px;
-    border: 2px solid var(--event-accent); /* ขอบทอง */
+    border: 2px solid var(--event-accent);
     border-radius: 8px;
     text-align: center;
-    transition: all 0.3s ease; /* เอฟเฟกต์เวลาเมาส์ชี้ */
+    transition: all 0.3s;
     margin-bottom: 5px;
 }
 
-  .event-spoiler-title:hover {
+ .sp-t:hover {
     background: var(--event-accent);
-    color: #09081b; /* สลับสีให้ปุ่มเรืองแสง */
+    color: #09081b;
     box-shadow: 0 0 15px rgba(244, 194, 60, 0.4);
 }
   
-.event-spoiler-content {
+.sp-c {
     background: rgba(9, 8, 27, 0.6);
     border: 1px dashed rgba(244, 194, 60, 0.3);
     border-radius: 8px;
