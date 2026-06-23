@@ -113,7 +113,7 @@
 /* กล่องแบนเนอร์จำลองตามภาพต้นฉบับ */
 .event-banner-custom {
   background-color: #00a896; /* สีพื้นหลังโทนเขียวอมฟ้า (Teal) ตามภาพ */
-  padding: 40px 20px;
+  padding: 20px 0px;
   text-align: center;
   box-sizing: border-box;
   border: 10px solid #009688; /* ขอบสองชั้นด้านนอก */
