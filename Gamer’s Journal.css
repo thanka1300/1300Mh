@@ -7,7 +7,7 @@
   --event-text-main: #e6eaf6;   /* สีตัวอักษร */
 }
 
-.event-layout-wrapper {
+#event-layout-wrapper {
   background: linear-gradient(rgba(19, 19, 19, 0.7) 0 0), url('https://i.ibb.co/Kj1BcS38/898037394494-Converted.jpg') center/50% repeat;
   padding: 70px 20px;
 }
