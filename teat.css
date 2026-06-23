@@ -4,10 +4,10 @@
 /* กล่องแบนเนอร์จำลองตามภาพต้นฉบับ */
 .event-banner-custom {
   background-color: #00a896; /* สีพื้นหลังโทนเขียวอมฟ้า (Teal) ตามภาพ */
-  padding: 40px 20px;
+  padding: 20px 10px;
   text-align: center;
   box-sizing: border-box;
-  border: 10px solid #009688; /* ขอบสองชั้นด้านนอก */
+  border: 7px solid #009688; /* ขอบสองชั้นด้านนอก */
   outline: 5px solid rgba(0,0,0,0.1);
   outline-offset: -15px;
 }
@@ -17,9 +17,7 @@
   font-family: 'Press Start 2P', 'Chakra Petch', cursive;
   font-size: 32px; /* ปรับขนาดให้เหมาะกับหน้าจอบอร์ด */
   color: #ff9f43; /* สีส้มทองไล่เฉด */
-  margin: 0 0 15px 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
   line-height: 1.4;
   /* สร้างเงา 3 มิติซ้อนหนาโทนสีน้ำเงินเข้มตามภาพ */
   text-shadow: 
