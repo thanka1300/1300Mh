@@ -22,7 +22,7 @@
 .e-heading { color: var(--event-accent);font-size: 28px;font-weight: bold;font-family: 'Noto Sans Thai', sans-serif;display: block; }
 
 /* Header Area */
-.g-hd { background: #00a896; padding: 45px 20px; text-align: center; box-sizing: border-box; border: 10px solid #009688; outline: 5px solid rgba(0,0,0,0.1); outline-offset: -15px; }
+.g-hd { background: #00a896; padding: 45px 20px; text-align: center; box-sizing: border-box; border: 13px solid #1a1a1a63; }
 .g-title { font-family: 'Press Start 2P', 'Chakra Petch', cursive; font-size: 35px; color: #ff9f43; margin: 0 0 10px 0; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; text-shadow: 3px 3px 0px #0c2461, 5px 5px 0px #0c2461, -1px -1px 0px #fffdf9; }
 .g-sub { font-family: Chakra Petch; font-weight: bold; font-size: 20px; color: #fff; margin: 0; letter-spacing: 1px; text-transform: uppercase; text-shadow: 2px 1px 0px #0c2461, 2px 2px 0px #0c2461; }
 .g-star { display: inline-block; color: #ffb142; margin: 0 10px; font-size: 22px; text-shadow: 2px 2px 0px #0c2461; }
