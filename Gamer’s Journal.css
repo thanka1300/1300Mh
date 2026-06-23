@@ -107,3 +107,71 @@
   width: 90%;
   margin: -80px auto 20px;
 }
+
+.gamer-journal-wrapper {
+    max-width: 95%;
+    margin: auto;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, #f4c23c, #f4c23c) border-box;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* กล่องเนื้อหาด้านใน */
+.gamer-journal-container {
+    background-color: #00a896;
+    padding: 45px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 10px solid #009688;
+    outline: 5px solid rgba(0,0,0,0.1);
+    outline-offset: -15px;
+}
+
+/* หัวข้อหลัก (สไตล์ Retro/Gamer) */
+.gamer-journal-title {
+    font-family: 'Press Start 2P', 'Chakra Petch', cursive;
+    font-size: 35px;
+    color: #ff9f43;
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-shadow: 3px 3px 0px #0c2461, 5px 5px 0px #0c2461, -1px -1px 0px #fffdf9;
+}
+
+/* หัวข้อย่อย */
+.gamer-journal-subtitle {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 0px #0c2461, 2px 2px 0px #0c2461;
+}
+
+/* ไอคอนดาวซ้าย-ขวา */
+.gamer-journal-star {
+    display: inline-block;
+    color: #ffb142;
+    font-size: 22px;
+    text-shadow: 2px 2px 0px #0c2461;
+}
+.gamer-journal-star.left { margin-right: 10px; }
+.gamer-journal-star.right { margin-left: 10px; }
+
+/* Responsive สำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+    .gamer-journal-title {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    .gamer-journal-subtitle {
+        font-size: 16px;
+    }
+    .gamer-journal-star {
+        font-size: 18px;
+    }
+}
