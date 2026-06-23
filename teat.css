@@ -7,7 +7,7 @@
   padding: 20px 10px;
   text-align: center;
   box-sizing: border-box;
-  border: 7px solid #009688; /* ขอบสองชั้นด้านนอก */
+  border: 10px solid #009688; /* ขอบสองชั้นด้านนอก */
   outline: 5px solid rgba(0,0,0,0.1);
   outline-offset: -15px;
 }
@@ -18,7 +18,7 @@
   font-size: 40px; /* ปรับขนาดให้เหมาะกับหน้าจอบอร์ด */
   color: #ff9f43; /* สีส้มทองไล่เฉด */
   text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 0.5;
   /* สร้างเงา 3 มิติซ้อนหนาโทนสีน้ำเงินเข้มตามภาพ */
   text-shadow: 
     3px 3px 0px #0c2461, 
