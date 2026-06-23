@@ -1,23 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&family=Chakra+Petch:wght@700&family=Press+Start+2P&display=swap');
 
-/* ตั้งค่าตัวแปรสีที่นี่ */
 :root {
-  --bg-wrap: #4540a7;       /* สีพื้นหลังของ .g-wrap */
-  --bg-inner: #09081b;      /* สีพื้นหลังของ .g-inner (กล่องเนื้อหาด้านใน) */
-  --border-box: #f4c23c;    /* สีเส้นขอบของ .g-box */
+  --bg-wrap: #4540a7;           /* สีกล่องฐานรองด้านหลัง */
+  --bg-inner: #09081b;          /* สีกล่องเนื้อหาด้านใน */
+  --border-box: #f4c23c;        /* สีเส้นขอบไฮไลท์และหัวข้อ */
+  --event-accent: #09081b;      /* สีเส้นขอบไฮไลท์และหัวข้อ */
 }
 
-/* Main Layout */
+
 .g-bg { background: linear-gradient(rgba(19,19,19,0.7) 0 0), url(https://i.ibb.co/Kj1BcS38/898037394494-Converted.jpg) center/50% repeat; padding: 70px 20px; }
 
-/* ใช้ตัวแปร --bg-wrap */
+
 .g-wrap { max-width: 750px; background: var(--bg-wrap); padding: 30px 25px; border-radius: 15px; margin: auto; }
 
-/* ใช้ตัวแปร --border-box */
+
 .g-box { max-width: 95%; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, var(--border-box), var(--border-box)) border-box; border: 5px solid transparent; border-radius: 5px; margin: auto; }
 
-/* ใช้ตัวแปร --bg-inner */
+
 .g-inner { max-width: 800px; background: var(--bg-inner); margin: auto; }
+
+.e-heading {
+color: var(--event-accent);
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Noto Sans Thai', sans-serif;
+  display: block; }
 
 /* Header Area */
 .g-hd { background: #00a896; padding: 45px 20px; text-align: center; box-sizing: border-box; border: 10px solid #009688; outline: 5px solid rgba(0,0,0,0.1); outline-offset: -15px; }
