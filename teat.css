@@ -15,7 +15,7 @@
 /* ข้อความหลักด้านบน: Gamer's Journal (สไตล์พิกเซล 3 มิติ) */
 .event-banner-title {
   font-family: 'Press Start 2P', 'Chakra Petch', cursive;
-  font-size: 40px; /* ปรับขนาดให้เหมาะกับหน้าจอบอร์ด */
+  font-size: 35px; /* ปรับขนาดให้เหมาะกับหน้าจอบอร์ด */
   color: #ff9f43; /* สีส้มทองไล่เฉด */
   text-transform: uppercase;
   line-height: 0.5;
