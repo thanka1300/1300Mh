@@ -4,7 +4,7 @@
   --bg-wrap: #4540a7;           /* สีกล่องฐานรองด้านหลัง */
   --bg-inner: #09081b;          /* สีกล่องเนื้อหาด้านใน */
   --border-box: #f4c23c;        /* สีเส้นขอบไฮไลท์และหัวข้อ */
-  --event-accent: #09081b;      /* สีเส้นขอบไฮไลท์และหัวข้อ */
+  --event-accent:#09081b;      /* สีเส้นขอบไฮไลท์และหัวข้อ */
 }
 
 
@@ -19,12 +19,7 @@
 
 .g-inner { max-width: 800px; background: var(--bg-inner); margin: auto; }
 
-.e-heading {
-color: var(--event-accent);
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Noto Sans Thai', sans-serif;
-  display: block; }
+.e-heading {color: var(--event-accent);font-size: 24px;font-weight: bold;font-family: 'Noto Sans Thai', sans-serif;display: block; }
 
 /* Header Area */
 .g-hd { background: #00a896; padding: 45px 20px; text-align: center; box-sizing: border-box; border: 10px solid #009688; outline: 5px solid rgba(0,0,0,0.1); outline-offset: -15px; }
