@@ -108,8 +108,6 @@
   margin: -80px auto 20px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Press+Start+2P&display=swap');
-
 /* กล่องแบนเนอร์จำลองตามภาพต้นฉบับ */
 .event-banner-custom {
   background-color: #00a896; /* สีพื้นหลังโทนเขียวอมฟ้า (Teal) ตามภาพ */
