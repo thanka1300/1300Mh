@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;700&family=Sriracha&display=swap');
 
 :root {
-  --event-bg-outer: #4540a7;    /* สีกล่องฐานรองด้านหลัง (เดิมคือน้ำเงินม่วง) */
-  --event-bg-inner: #09081b;    /* สีกล่องเนื้อหาด้านใน (เดิมคือดำอมน้ำเงิน) */
-  --event-accent: #f4c23c;      /* สีเส้นขอบไฮไลท์และหัวข้อ (เดิมคือเหลืองทอง) */
-  --event-text-main: #e6eaf6;   /* สีตัวอักษรเนื้อหาทั่วไป */
+  --event-bg-outer: #4540a7;    /* สีกล่องหลัก */
+  --event-bg-inner: #09081b;    /* สีกล่องเนื้อหาด้านใน*/
+  --event-accent: #f4c23c;      /* สีเส้นขอบและหัวข้อ*/
+  --event-text-main: #e6eaf6;   /* สีตัวอักษร */
 }
 
-/* พื้นหลังหลักและกล่องครอบนอก */
 .event-layout-wrapper {
   background: linear-gradient(rgba(19, 19, 19, 0.7) 0 0), url('https://i.ibb.co/Kj1BcS38/898037394494-Converted.jpg') center/50% repeat;
   padding: 70px 20px;
@@ -48,6 +47,8 @@
   color: var(--event-text-main);
   font-size: 18px;
   font-family: 'Noto Sans Thai', sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.8;
   padding: 40px;
 }
@@ -60,7 +61,7 @@
 
 .event-heading {
   color: var(--event-accent);
-  font-size: 24px;
+  font-size: 27px;
   font-weight: bold;
   font-family: 'Noto Sans Thai', sans-serif;
   display: block;
