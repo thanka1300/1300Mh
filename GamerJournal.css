@@ -3,7 +3,6 @@
 :root {
   --bg-wrap: #4540a7;           /* สีกล่องฐานรองด้านหลัง */
   --bg-inner: #09081b;          /* สีกล่องเนื้อหาด้านใน */
-  --border-box: #f4c23c;        /* สีเส้นขอบไฮไลท์และหัวข้อ */
   --event-accent: #f4c23c;     /* สีเส้นขอบไฮไลท์และหัวข้อ */
   --event-banner: #00a896 ;     /* สีแบนเนอร์ */
 }
@@ -11,13 +10,13 @@
 
 .g-bg { background: linear-gradient(rgba(19,19,19,0.7) 0 0), url(https://i.ibb.co/Kj1BcS38/898037394494-Converted.jpg) center/50% repeat; padding: 70px 20px; }
 .g-wrap { max-width: 750px; background: var(--bg-wrap); padding: 30px 25px; border-radius: 15px; margin: auto; }
-.g-box { max-width: 95%; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, var(--border-box), var(--border-box)) border-box; border: 5px solid transparent; border-radius: 5px; margin: auto; }
+.g-box { max-width: 95%; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, var(--event-accent), var(--event-accent)) border-box; border: 5px solid transparent; border-radius: 5px; margin: auto; }
 .g-inner { max-width: 800px; background: var(--bg-inner); margin: auto; }
 .e-heading { color: var(--event-accent);font-size: 28px;font-weight: bold;font-family: 'Noto Sans Thai', sans-serif;display: block; }
 
 /* Header Area */
 .g-hd { background: var(--event-banner); padding: 45px 20px; text-align: center; box-sizing: border-box; border: 13px solid #1a1a1a2e; }
-.g-title { font-family: 'Press Start 2P', 'Chakra Petch', cursive; font-size: 35px; color: #ff9f43; margin: 0 0 10px 0; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; text-shadow: 3px 3px 0px #0c2461, 5px 5px 0px #0c2461, -1px -1px 0px #fffdf9; }
+.g-title { font-family: 'Press Start 2P', 'Chakra Petch', cursive; font-size: 35px; color: var(--event-accent); margin: 0 0 10px 0; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; text-shadow: 3px 3px 0px #0c2461, 5px 5px 0px #0c2461, -1px -1px 0px #fffdf9; }
 .g-sub { font-family: Chakra Petch; font-weight: bold; font-size: 20px; color: #fff; margin: 0; letter-spacing: 1px; text-transform: uppercase; text-shadow: 2px 1px 0px #0c2461, 2px 2px 0px #0c2461; }
 .g-star { display: inline-block; color: #ffb142; margin: 0 10px; font-size: 22px; text-shadow: 2px 2px 0px #0c2461; }
 
@@ -38,12 +37,12 @@
 
   .sp-t {
     background: #09081b;
-    color: var(--event-accent);
+    color: var();
     font-family: 'Noto Sans Thai', sans-serif;
     font-size: 20px;
     font-weight: bold;
     padding: 15px 25px;
-    border: 2px solid var(--event-accent);
+    border: 2px solid var();
     border-radius: 8px;
     text-align: center;
     transition: all 0.3s;
@@ -51,7 +50,7 @@
 }
 
  .sp-t:hover {
-    background: var(--event-accent);
+    background: var();
     color: #09081b;
     box-shadow: 0 0 15px rgba(244, 194, 60, 0.4);
 }
