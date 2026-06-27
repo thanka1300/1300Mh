@@ -99,6 +99,13 @@
   margin:auto;
 }
 
+.lineheight2 {
+  width:2px;
+  height:50px;
+  background:#636363;
+  margin:20px auto;
+}
+
 .mapletxrole {
   max-width:85%;
   margin:0px auto;
