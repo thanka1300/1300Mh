@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Libre+Barcode+39&display=swap');
 
 :root {
-  --main-color: #2b4265; 
+  --main-color: #2b4265;
+  --paper-color: #f4f4f4; 
 }
 
 #delphinus25 {
   max-width: 650px;
   height: auto;
-  background: #f4f4f4;
+  background: var(--paper-color);
   color: var(--main-color);
   border-radius: 5px;
   padding: 30px;
