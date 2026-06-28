@@ -2,7 +2,9 @@
 
 :root {
   --main-color: #2b4265;
-  --paper-color: #f4f4f4; 
+  --paper-color: #f4f4f4;
+  --note-color: #f4f4f4;
+  --role-color: #2b4265;
 }
 
 #delphinus25 {
@@ -90,14 +92,14 @@
   font-style: normal;
   font-size: 16px;
   line-height: 1.8;
-  color: var(--main-color);
+  color: var(--role-color);
   text-align: justify;
 }
 
 .Del25note {
   text-align: center;
   background: var(--main-color);
-  color: #fff;
+  color: var(--note-color);
   padding: 5px;
   margin-top: 20px;
 }
