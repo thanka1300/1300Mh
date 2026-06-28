@@ -4,7 +4,7 @@
   max-width: 650px;
   height: auto;
   background: #f4f4f4;
-  color: #1f3350;
+  color: #2b4265;
   border-radius: 5px;
   padding: 30px;
   margin: auto;
@@ -29,7 +29,7 @@
   position: relative;
   width: 12px;
   height: 18px;
-  background: #1f3350;
+  background: #2b4265;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
 }
 
@@ -91,7 +91,7 @@
 
 .Del25note {
   text-align: center;
-  background: #1f3350;
+  background: #2b4265;
   color: #fff;
   padding: 5px;
   margin-top: 20px;
