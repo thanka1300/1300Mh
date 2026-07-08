@@ -46,7 +46,7 @@
   justify-content: space-between;
 }
 .m-left {
-  max-width: 365px;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,7 +86,7 @@
   font-size: 13px;
 }
 .wave {
-  width: 250px;
+  width: 220px;
   height: 40px;
   background-color: var(--color);
   mask: var(--mask) center/cover;
