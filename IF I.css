@@ -2,6 +2,7 @@
 
 :root {
   --color: #cbc8cc;
+  --color-text: #cbc8cc;
   --box-bg: #13131394;
   --bg: url('https://i.ibb.co/PGqY2y2F/Black-Cream-Brutalist-Live-Rock-Poster.jpg');
   --art: url('https://i.pinimg.com/1200x/eb/ef/8f/ebef8f1b1299fff8577c783633995aca.jpg');
@@ -17,7 +18,7 @@
   max-width: 650px;
   background: var(--bg) center/cover;
   border: 0.5px solid var(--color);
-  color: var(--color);
+  color: var(--color-text);
   font-family: 'Archivo Black', sans-serif;
   font-weight: 400;
   padding: 30px;
