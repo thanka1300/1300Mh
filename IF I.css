@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Rubik+Lines&display=swap');
+
+:root {
+  --color: #cbc8cc;
+  --box-bg: #13131394;
+  --bg: url('https://i.ibb.co/PGqY2y2F/Black-Cream-Brutalist-Live-Rock-Poster.jpg');
+  --art: url('https://i.pinimg.com/1200x/eb/ef/8f/ebef8f1b1299fff8577c783633995aca.jpg');
+  --profile: url('https://i.pinimg.com/736x/09/b3/9f/09b39f2b1869be4d4165361722e7e5d7.jpg');
+  --mask: url('https://i.ibb.co/5gXDKQhT/Pngtree-png-transparent-background-music-player-8412604.png');
+}
+.box-bg {
+  background: var(--box-bg);
+  border: 2px solid var(--color);
+  padding: 15px;
+}
+
+.poster {
+  max-width: 650px;
+  background: var(--bg) center/cover;
+  border: 0.5px solid var(--color);
+  color: var(--color);
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 400;
+  padding: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 1. Header */
+.p-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.h-txt {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.p-main {
+  display: flex;
+  justify-content: space-between;
+}
+.m-left {
+  max-width: 365px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.p-title {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.player-box {
+  height: 80px;
+  border: 2px solid var(--color);
+  padding: 15px;
+  display: flex;
+}
+.p-wrap {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.art {
+  width: 70px;
+  height: 70px;
+  background: var(--art) center/cover;
+}
+.ctrl {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.song {
+  padding: 5px;
+  font-family: 'Google Sans', sans-serif;
+  text-align: center;
+  font-size: 13px;
+}
+.wave {
+  width: 250px;
+  height: 40px;
+  background-color: var(--color);
+  mask: var(--mask) center/cover;
+  -webkit-mask: var(--mask) center/cover;
+}
+.m-right {
+  width: 200px;
+  height: 200px;
+  background: var(--profile) center/cover;
+  border: 2px solid var(--color);
+  margin-left: 20px;
+}
+
+.p-content, .p-foot {
+  font-family: 'Google Sans', sans-serif;
+  line-height: 1.8;
+  font-size: 18px;
+}
+.p-content {
+  min-height: 250px;
+  text-align: justify;
+}
+.p-foot {
+  text-align: center;
+}
