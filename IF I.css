@@ -86,14 +86,13 @@
   padding: 5px;
   font-family: 'Google Sans', sans-serif;
   text-align: center;
-  color: var(--sup-color);
+  color: var(--color-text);
   font-size: 13px;
 }
 .wave {
   width: 220px;
   height: 40px;
-  background-color: var(--color);
-  color: var(--sup-color);
+  background-color: var(--sup-color);
   mask: var(--mask) center/cover;
   -webkit-mask: var(--mask) center/cover;
 }
