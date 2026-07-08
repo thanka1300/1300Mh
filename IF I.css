@@ -5,7 +5,6 @@
   --box-bg: #13131394;
   --bg: url('https://i.ibb.co/PGqY2y2F/Black-Cream-Brutalist-Live-Rock-Poster.jpg');
   --art: url('https://i.pinimg.com/1200x/eb/ef/8f/ebef8f1b1299fff8577c783633995aca.jpg');
-  --profile: url('https://i.pinimg.com/736x/09/b3/9f/09b39f2b1869be4d4165361722e7e5d7.jpg');
   --mask: url('https://i.ibb.co/5gXDKQhT/Pngtree-png-transparent-background-music-player-8412604.png');
 }
 .box-bg {
@@ -95,7 +94,6 @@
 .m-right {
   width: 200px;
   height: 200px;
-  background: var(--profile) center/cover;
   border: 2px solid var(--color);
   margin-left: 20px;
 }
