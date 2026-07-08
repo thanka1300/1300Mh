@@ -114,4 +114,5 @@
 }
 .p-foot {
   text-align: center;
+  color: var(--sup-color);
 }
