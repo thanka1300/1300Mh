@@ -33,7 +33,7 @@
 .dc-pic {
   max-width: 700px;
   height: 250px;
-  border: 5px solid #fff;
+  border: 5px solid var(--dc-box-bg);
   border-radius: 5px;
   margin: -16rem auto 0;
   transform: rotate(-1deg);
@@ -43,7 +43,7 @@
   font-size: 45px;
   color: var(--dc-accent);
   transform: translate(15px, -2.5rem);
-  -webkit-text-stroke: 8px #fff;
+  -webkit-text-stroke: 8px var(--dc-box-bg);
   paint-order: stroke fill;
 }
 .dc-pills {
@@ -57,7 +57,7 @@
   width: 10px;
   height: 50px;
   background-color: var(--dc-accent);
-  border: 4px solid #fff;
+  border: 4px solid var(--dc-box-bg);
   border-radius: 100px;
   margin: 0 auto;
 }
