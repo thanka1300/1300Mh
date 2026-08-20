@@ -19,7 +19,7 @@
   background-size: 80px 80px;
   border-radius: 5px;
   padding: 35px 20px 20px;
-  margin: 20px auto;
+  margin: 20px auto 10px;
 }
 
 .dc-bg {
@@ -98,4 +98,10 @@
   text-align: center;
   border-radius: 5px;
   padding: 5px 15px;
+}
+.130mh {
+  font-size:12px;
+  font-family:'Bai Jamjuree',sans-serif;
+  color:#717171;
+  text-align:center;
 }
