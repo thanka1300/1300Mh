@@ -91,6 +91,7 @@
 }
 
 .dc-tag {
+  max-width : 680px;
   background: var(--dc-box-bg);
   font-size: 16px;
   color: var(--dc-text);
@@ -101,8 +102,8 @@
 }
 
 .dc-mh {
-  font-size:12px;
+  font-size: 12px;
   font-family:'Bai Jamjuree',sans-serif;
-  color:#717171;
-  text-align:center;
+  color: #717171;
+  text-align: center;
 }
