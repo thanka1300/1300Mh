@@ -1,0 +1,273 @@
+/* --- Global Reset & Layout --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #262626;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 935px;
+  padding: 0 20px;
+}
+
+/* --- Header --- */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 44px;
+}
+
+.avatar-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.avatar-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dbdbdb;
+  padding: 3px;
+}
+
+.profile-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.btn {
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background-color: #0095f6;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #efefef;
+  color: #000000;
+}
+
+.stats-row {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.bio-row {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.fullname {
+  font-weight: 600;
+}
+
+.bio-link {
+  color: #00376b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- Navigation Tabs --- */
+.profile-tabs {
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 16px 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #262626;
+  border-top: 1px solid #262626;
+  margin-top: -1px;
+}
+
+/* --- Posts Grid --- */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #efefef;
+  display: block;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.03);
+}
+
+/* --- Pure CSS Modal (Popup) using :target --- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-overlay:target {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  cursor: default;
+}
+
+.modal-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  animation: modalPop 0.2s ease-out;
+}
+
+.btn-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color 0.2s;
+}
+
+.btn-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-img-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #000000;
+}
+
+.modal-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-content {
+  padding: 16px 20px;
+}
+
+.modal-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- Responsive for Mobile --- */
+@media (max-width: 735px) {
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+  }
+  .avatar-box {
+    margin-right: 15px;
+  }
+  .stats-row {
+    gap: 15px;
+    font-size: 14px;
+  }
+  .posts-grid {
+    gap: 4px;
+  }
+}
