@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://thanka1300.github.io/1300Mh/CHTS.css" rel="stylesheet">
+
+<style>
+  /* คำสั่งบังคับซ่อน/แสดง Tab เมื่อไม่มีในไฟล์ CSS หลัก */
+  .dc-radio { display: none !important; }
+  .dc-tab-content { display: none !important; }
+
+  #dc-tab1:checked ~ #tab-posts,
+  #dc-tab2:checked ~ #tab-reels,
+  #dc-tab3:checked ~ #tab-tagged {
+    display: block !important;
+  }
+
+  #dc-tab1:checked ~ .dc-nav label[for="dc-tab1"],
+  #dc-tab2:checked ~ .dc-nav label[for="dc-tab2"],
+  #dc-tab3:checked ~ .dc-nav label[for="dc-tab3"] {
+    border-top: 1px solid #262626 !important;
+    color: #262626 !important;
+    margin-top: -1px !important;
+  }
+</style>
