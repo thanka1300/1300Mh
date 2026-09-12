@@ -1,4 +1,10 @@
+<!-- ฟอนต์ที่ใช้งาน -->
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- 🎨 สไตล์ CSS -->
+<style>
 :root {
+  /* เปลี่ยนโค้ดสีและค่าหลักตรงนี้ได้ */
   --dc-bg: #fff;
   --dc-border: #dbdbdb;
   --dc-text-dark: #262626;
@@ -7,7 +13,8 @@
   --dc-gray-btn: #efefef;
 }
 
-#dc-card {
+/* กรอบการ์ดหลัก */
+.dc-card {
   max-width: 650px;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -17,13 +24,14 @@
   border-radius: 15px;
 }
 
+/* ส่วนหัวโปรไฟล์ */
 .dc-head {
   display: flex;
   padding: 30px 40px;
 }
 
-.dc-avatar-wrap {
-  margin-right: 50px;
+.dc-avatar-wrap { 
+  margin-right: 50px; 
 }
 
 .dc-avatar {
@@ -50,59 +58,58 @@
   margin-bottom: 20px;
 }
 
-.dc-username {
-  font-size: 20px;
-  font-weight: 400;
-  margin-right: 20px;
+.dc-username { 
+  font-size: 20px; 
+  font-weight: 400; 
+  margin-right: 20px; 
 }
 
-.dc-btn-follow {
-  background-color: var(--dc-blue);
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-right: 8px;
+.dc-btn-follow { 
+  background-color: var(--dc-blue); 
+  color: #fff; 
+  padding: 6px 16px; 
+  border-radius: 8px; 
+  font-size: 14px; 
+  font-weight: 600; 
+  margin-right: 8px; 
+  cursor: pointer;
 }
 
-.dc-btn-msg {
-  background-color: var(--dc-gray-btn);
-  color: var(--dc-text-dark);
-  padding: 6px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
+.dc-btn-msg { 
+  background-color: var(--dc-gray-btn); 
+  color: var(--dc-text-dark); 
+  padding: 6px 16px; 
+  border-radius: 8px; 
+  font-size: 14px; 
+  font-weight: 600; 
+  cursor: pointer;
 }
 
-.dc-stats {
-  display: flex;
-  margin-bottom: 20px;
-  font-size: 16px;
+.dc-stats { 
+  display: flex; 
+  margin-bottom: 20px; 
+  font-size: 16px; 
 }
 
-.dc-stat {
-  margin-right: 40px;
+.dc-stat { 
+  margin-right: 40px; 
 }
 
-.dc-stat:last-child {
-  margin-right: 0;
+.dc-stat span { 
+  font-weight: 600; 
+  display: inline-block; 
 }
 
-.dc-stat span {
-  font-weight: 600;
-  display: inline-block;
+.dc-bio { 
+  font-size: 14px; 
+  line-height: 1.5; 
 }
 
-.dc-bio {
-  font-size: 14px;
-  line-height: 1.5;
+.dc-name { 
+  font-weight: 600; 
 }
 
-.dc-name {
-  font-weight: 600;
-}
-
+/* แถบเมนู POSTS / REELS / TAGGED */
 .dc-nav {
   border-top: 1px solid var(--dc-border);
   display: flex;
@@ -117,6 +124,8 @@
 .dc-nav-item {
   padding: 15px 0;
   margin: 0 20px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .dc-nav-item.dc-active {
@@ -125,6 +134,16 @@
   margin-top: -1px;
 }
 
+/* การซ่อน/แสดงหน้า */
+.dc-tab-content {
+  display: none;
+}
+
+.dc-tab-content.dc-show {
+  display: block;
+}
+
+/* หน้า 1: ตารางรูปภาพ POSTS */
 .dc-grid {
   display: flex;
   flex-wrap: wrap;
@@ -150,3 +169,28 @@
 .dc-img7 { background-image: url(https://i.pinimg.com/736x/d7/81/a7/d781a77e60d1a6d266f80a697be185a8.jpg); }
 .dc-img8 { background-image: url(https://i.pinimg.com/736x/5f/2c/9f/5f2c9fdca45d177bf15e5e013bf5efee.jpg); }
 .dc-img9 { background-image: url(https://www.boredpanda.com/blog/wp-content/uploads/2025/03/67e4117ea0ef0__700.jpg); }
+
+/* หน้า 2: กล่องข้อความสำหรับ REELS */
+.dc-msg-box {
+  margin: 15px 20px 25px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid var(--dc-border);
+  border-radius: 10px;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.dc-msg-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--dc-text-dark);
+  margin-bottom: 10px;
+}
+
+.dc-msg-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--dc-text-dark);
+  text-align: justify;
+}
+</style>
