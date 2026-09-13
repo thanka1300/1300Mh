@@ -145,19 +145,7 @@
   width: 32%;
   height: 200px;
   margin: 0.6%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-.dc-img1 { background-image: url(https://i.pinimg.com/1200x/f3/e1/cb/f3e1cb5ff3392da5544e51a93866da5b.jpg); }
-.dc-img2 { background-image: url(https://i.pinimg.com/1200x/97/7b/15/977b15b489afe14c76095884a9987bc4.jpg); }
-.dc-img3 { background-image: url(https://i.pinimg.com/736x/fe/71/5b/fe715bfc1e8be2b79052ecad5b824113.jpg); }
-.dc-img4 { background-image: url(https://i.pinimg.com/736x/8e/3e/9e/8e3e9e53690438d5df1d8579ea68c657.jpg); }
-.dc-img5 { background-image: url(https://i.pinimg.com/736x/c2/57/0b/c2570b95858522bc874244b91f9ab734.jpg); }
-.dc-img6 { background-image: url(https://i.pinimg.com/736x/7a/63/fa/7a63fa641522fb75100d104c87e0c589.jpg); }
-.dc-img7 { background-image: url(https://i.pinimg.com/736x/d7/81/a7/d781a77e60d1a6d266f80a697be185a8.jpg); }
-.dc-img8 { background-image: url(https://i.pinimg.com/736x/5f/2c/9f/5f2c9fdca45d177bf15e5e013bf5efee.jpg); }
-.dc-img9 { background-image: url(https://www.boredpanda.com/blog/wp-content/uploads/2025/03/67e4117ea0ef0__700.jpg); }
 
 .dc-msg-box {
   margin: 15px 20px 25px;
