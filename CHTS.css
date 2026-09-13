@@ -12,7 +12,7 @@
 .dc-card {
   max-width: 650px;
   margin: 0 auto;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--dc-bg);
   border: 1px solid var(--dc-border);
   box-sizing: border-box;
@@ -32,7 +32,6 @@
   padding: 2px;
   box-sizing: border-box;
   margin-right: 50px;
-  background: url(https://i.pinimg.com/1200x/8e/c5/a3/8ec5a334d6bff1e41ee303e726729837.jpg) 80% 10%/150% no-repeat;
 }
 
 .dc-info {
@@ -98,12 +97,10 @@
   font-weight: 600;
 }
 
-/* ซ่อน Radio Input */
 .dc-radio {
   display: none;
 }
 
-/* แถบเมนู Nav */
 .dc-nav {
   border-top: 1px solid var(--dc-border);
   display: flex;
@@ -122,7 +119,6 @@
   user-select: none;
 }
 
-/* ควบคุมการแสดงผลผ่าน CSS Radio (ไม่ต้องใช้ JS) */
 #dc-tab1:checked ~ .dc-nav label[for="dc-tab1"],
 #dc-tab2:checked ~ .dc-nav label[for="dc-tab2"],
 #dc-tab3:checked ~ .dc-nav label[for="dc-tab3"] {
@@ -139,9 +135,20 @@
   display: block;
 }
 
-/* Grid รูปภาพ */
-.dc-grid { display: flex; flex-wrap: wrap; justify-content: flex-start; padding: 0px 20px 20px; }
-.dc-img { width: 32%; height: 200px; margin: 0.6%; background-position: center; background-size: cover; background-repeat: no-repeat; }
+.dc-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0px 20px 20px;
+}
+.dc-img {
+  width: 32%;
+  height: 200px;
+  margin: 0.6%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .dc-img1 { background-image: url(https://i.pinimg.com/1200x/f3/e1/cb/f3e1cb5ff3392da5544e51a93866da5b.jpg); }
 .dc-img2 { background-image: url(https://i.pinimg.com/1200x/97/7b/15/977b15b489afe14c76095884a9987bc4.jpg); }
 .dc-img3 { background-image: url(https://i.pinimg.com/736x/fe/71/5b/fe715bfc1e8be2b79052ecad5b824113.jpg); }
@@ -152,11 +159,22 @@
 .dc-img8 { background-image: url(https://i.pinimg.com/736x/5f/2c/9f/5f2c9fdca45d177bf15e5e013bf5efee.jpg); }
 .dc-img9 { background-image: url(https://www.boredpanda.com/blog/wp-content/uploads/2025/03/67e4117ea0ef0__700.jpg); }
 
-/* กล่องข้อความ */
 .dc-msg-box {
-  margin: 15px 20px 25px; padding: 20px;
-  background-color: #f9f9f9; border: 1px solid var(--dc-border);
-  border-radius: 10px; font-family: 'Bai Jamjuree', sans-serif;
+  margin: 15px 20px 25px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid var(--dc-border);
+  border-radius: 10px;
+  font-family: 'Bai Jamjuree', sans-serif;
 }
-.dc-msg-title { font-weight: 600; font-size: 16px; color: var(--dc-text-dark); margin-bottom: 10px; }
-.dc-msg-text { font-size: 14px; line-height: 1.6; color: var(--dc-text-dark); text-align: justify; }
+.dc-msg-title {
+  font-weight: 600; font-size: 16px;
+  color: var(--dc-text-dark);
+  margin-bottom: 10px;
+}
+.dc-msg-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dc-text-dark);
+  text-align: justify;
+}
