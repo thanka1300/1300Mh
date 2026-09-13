@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
+/* ย้ายตัวแปรมาไว้ที่ .dc-card ป้องกันการทับกันระหว่างโพสต์ */
+.dc-card {
   --dc-bg: #fff;
   --dc-border: #dbdbdb;
   --dc-text-dark: #262626;
   --dc-text-sub: #8e8e8e;
   --dc-blue: #0095f6;
   --dc-gray-btn: #efefef;
-}
 
-.dc-card {
   max-width: 650px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
@@ -119,19 +118,23 @@
   user-select: none;
 }
 
-#dc-tab1:checked ~ .dc-nav label[for="dc-tab1"],
-#dc-tab2:checked ~ .dc-nav label[for="dc-tab2"],
-#dc-tab3:checked ~ .dc-nav label[for="dc-tab3"] {
+/* ควบคุมขีดใต้ของ Nav เมื่อเลือกแท็บ */
+.dc-radio-1:checked ~ .dc-nav .dc-nav-item1,
+.dc-radio-2:checked ~ .dc-nav .dc-nav-item2,
+.dc-radio-3:checked ~ .dc-nav .dc-nav-item3 {
   border-top: 1px solid var(--dc-text-dark);
   color: var(--dc-text-dark);
   margin-top: -1px;
 }
 
-.dc-tab-content { display: none; }
+/* ควบคุมการแสดงผลเนื้อหาแท็บ */
+.dc-tab-content { 
+  display: none; 
+}
 
-#dc-tab1:checked ~ #tab-posts,
-#dc-tab2:checked ~ #tab-reels,
-#dc-tab3:checked ~ #tab-tagged {
+.dc-radio-1:checked ~ .dc-tab-1,
+.dc-radio-2:checked ~ .dc-tab-2,
+.dc-radio-3:checked ~ .dc-tab-3 {
   display: block;
 }
 
@@ -141,6 +144,7 @@
   justify-content: flex-start;
   padding: 0px 20px 20px;
 }
+
 .dc-img {
   width: 32%;
   height: 200px;
@@ -155,11 +159,14 @@
   border-radius: 10px;
   font-family: 'Bai Jamjuree', sans-serif;
 }
+
 .dc-msg-title {
-  font-weight: 600; font-size: 16px;
+  font-weight: 600; 
+  font-size: 16px;
   color: var(--dc-text-dark);
   margin-bottom: 10px;
 }
+
 .dc-msg-text {
   font-size: 16px;
   line-height: 1.6;
