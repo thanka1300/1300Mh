@@ -1,6 +1,11 @@
+สาเหตุที่กดแล้วไม่ขึ้นอะไรเลย เป็นเพราะเบราว์เซอร์หรือแพลตฟอร์มคอมมูนั้น ยังไม่รองรับ คำสั่ง :has() ใน CSS ครับ ทำให้มันไม่รู้ว่าต้องแสดงผลเนื้อหาอย่างไรเมื่อเรากดเลือกแท็บ
+
+หากต้องการให้ คนนำไปใช้ก๊อปปี้วางซ้ำได้ทันที 100% โดยไม่ต้องเปลี่ยน ID/Name และ รองรับเบราว์เซอร์เก่าทุกตัว (ไม่ใช้ :has()) สามารถทำได้ด้วยเทคนิคการปรับโครงสร้าง CSS และ HTML เล็กน้อย โดยย้าย <input> เข้ามาไว้ด้านในแต่ละแท็บโดยตรงครับ
+
+1. โค้ด CSS ใหม่ (นำไปอัปเดตใส่ไฟล์ CHTS.css)
+CSS
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* ย้ายตัวแปรมาไว้ที่ .dc-card ป้องกันการทับกันระหว่างโพสต์ */
 .dc-card {
   --dc-bg: #fff;
   --dc-border: #dbdbdb;
@@ -111,34 +116,38 @@
   margin-bottom: 2px;
 }
 
+/* ตกแต่งปุ่ม Nav */
 .dc-nav-item {
   padding: 15px 0;
   margin: 0 20px;
   cursor: pointer;
   user-select: none;
+  display: inline-block;
 }
 
-/* ซ่อน Radio */
-.dc-radio {
-  display: none;
-}
-
-/* ซ่อน Tab Content ทั้งหมดก่อน */
+/* ซ่อนเนื้อหาทั้งหมดไว้ก่อน */
 .dc-tab-content {
   display: none;
 }
 
-/* ขีดใต้ปุ่ม Nav เมื่อถูกเลือก */
-.dc-nav-item:has(.dc-radio:checked) {
+/* เมื่อเลือก radio ให้เน้นปุ่ม nav นั้นๆ */
+.dc-nav-item:has(.dc-radio:checked),
+.dc-radio:checked + span {
   border-top: 1px solid var(--dc-text-dark);
   color: var(--dc-text-dark);
   margin-top: -1px;
 }
 
-/* แสดง Content ตามแท็บที่เลือก */
-.dc-card:has(.dc-radio-1:checked) .dc-tab-1,
-.dc-card:has(.dc-radio-2:checked) .dc-tab-2,
-.dc-card:has(.dc-radio-3:checked) .dc-tab-3 {
+/* ซ่อน/แสดงเนื้อหาตาม radio ที่ซ่อนอยู่ข้างใน */
+.dc-tab-container {
+  position: relative;
+}
+
+.dc-tab-wrapper {
+  display: inline;
+}
+
+.dc-tab-wrapper .dc-radio:checked ~ .dc-tab-content {
   display: block;
 }
 
