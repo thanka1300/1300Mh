@@ -35,10 +35,6 @@
   padding: 30px 40px;
 }
 
-.av-wrap {
-  margin-right: 50px;
-}
-
 .av-img {
   width: 150px;
   height: 150px;
@@ -46,6 +42,7 @@
   border: 1px solid var(--border-color);
   padding: 2px;
   box-sizing: border-box;
+  margin-right: 20px;
 }
 
 .p-info {
