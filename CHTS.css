@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --dc-bg: #fff;
@@ -12,33 +12,82 @@
 .dc-card {
   max-width: 650px;
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: font-family: 'Roboto', sans-serif;
   background-color: var(--dc-bg);
   border: 1px solid var(--dc-border);
   box-sizing: border-box;
   border-radius: 15px;
 }
 
-.dc-head { display: flex; padding: 30px 40px; }
-.dc-avatar-wrap { margin-right: 50px; }
-.dc-avatar {
-  width: 150px; height: 150px; border-radius: 50%;
-  border: 1px solid var(--dc-border); padding: 2px; box-sizing: border-box;
-  background: url(https://i.pinimg.com/1200x/8e/c5/a3/8ec5a334d6bff1e41ee303e726729837.jpg) 80% 10%/150% no-repeat;
+.dc-head {
+  display: flex;
+  padding: 30px 40px;
 }
-.dc-info { flex: 1; display: flex; flex-direction: column; justify-content: center; color: var(--dc-text-dark); }
-.dc-user-row { display: flex; align-items: center; margin-bottom: 20px; }
-.dc-username { font-size: 20px; font-weight: 400; margin-right: 20px; }
-.dc-btn-follow { background-color: var(--dc-blue); color: #fff; padding: 6px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; margin-right: 8px; }
-.dc-btn-msg { background-color: var(--dc-gray-btn); color: var(--dc-text-dark); padding: 6px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; }
-.dc-stats { display: flex; margin-bottom: 20px; font-size: 16px; }
-.dc-stat { margin-right: 40px; }
-.dc-stat span { font-weight: 600; display: inline-block; }
-.dc-bio { font-size: 14px; line-height: 1.5; }
-.dc-name { font-weight: 600; }
+.dc-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid var(--dc-border);
+  padding: 2px;
+  box-sizing: border-box;
+  margin-right: 50px;
+}
+.dc-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--dc-text-dark);
+}
+.dc-user-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.dc-username {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 20px;
+}
+.dc-btn-follow {
+  background-color: var(--dc-blue);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+.dc-btn-msg {
+  background-color: var(--dc-gray-btn);
+  color: var(--dc-text-dark);
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.dc-stats {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.dc-stat {
+  margin-right: 40px;
+}
+.dc-stat span {
+font-weight: 600; display: inline-block;
+}
+.dc-bio {
+font-size: 14px; line-height: 1.5;
+}
+.dc-name {
+font-weight: 600;
+}
 
 /* ซ่อน Radio Input */
-.dc-radio { display: none; }
+.dc-radio {
+  display: none;
+}
 
 /* แถบเมนู Nav */
 .dc-nav {
