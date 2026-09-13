@@ -169,6 +169,7 @@
   text-align: center;
   cursor: pointer;
   list-style: none;
+  margin-bottom: 20px
 }
 
 .sp summary::marker {
