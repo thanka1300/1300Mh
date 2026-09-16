@@ -23,6 +23,7 @@
   color:#dddddd;
   text-align:center;
   line-height:1;
+  font-weight:bold;
   margin:0% 5% 0% 60%; 
 }
 
@@ -46,4 +47,9 @@
   max-width:95%;
   padding:30px;
   margin:-40px auto 0px
+}
+.del_head_text {
+  font-weight:bold;
+  color:#eeeeee;
+  display:inline-block;  
 }
