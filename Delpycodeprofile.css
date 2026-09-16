@@ -48,8 +48,25 @@
   padding:30px;
   margin:-40px auto 0px
 }
+
 .del_head_text {
   font-weight:bold;
   color:#eeeeee;
   display:inline-block;  
 }
+
+.del_Name_text {
+  font-size:32px
+  font-weight:bold;
+  color:#eeeeee;
+  display:inline-block;  
+}
+
+.del_Down_text {
+  font-size:12px
+  font-weight:bold;
+  color:#eeeeee;
+  display:inline-block;  
+}
+
+
