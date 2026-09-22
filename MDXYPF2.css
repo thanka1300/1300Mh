@@ -28,7 +28,6 @@
   position: absolute;
   color: #0c0c0c;
   font-size: 10px;
-  z-index: 10;
 }
 
 .menu-item {
@@ -170,7 +169,7 @@
   height: 80px;
   background: url('https://iili.io/KePFD1R.png') center / 80% no-repeat, linear-gradient(135deg, rgba(0, 0, 0, 0.64), rgb(42, 42, 42));
   margin: 20px auto 0px;
-  transform: translate(-15.5rem, -29rem);
+  transform: translate(-15.5rem, -39rem);
 }
 
 /* ---------------- Mini Player Widget ---------------- */
@@ -179,7 +178,7 @@
   min-height: 200px;
   background: linear-gradient(135deg, rgba(219, 219, 219, 0.64), rgb(235, 235, 235));
   margin: auto;
-  transform: translate(17rem, -33rem);
+  transform: translate(17rem, -45rem);
 }
 
 #player-header {
@@ -249,7 +248,7 @@
   background: linear-gradient(135deg, rgba(219, 219, 219, 0.64), rgb(235, 235, 235));
   margin: auto;
   padding-bottom: 20px;
-  transform: translate(13rem, -30rem);
+  transform: translate(13rem, -40rem);
 }
 
 #avatar {
