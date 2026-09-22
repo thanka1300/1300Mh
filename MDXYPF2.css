@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap');
 
 :root {
-  --main-bg: url(https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg) 70% 100% / 150%;
-  }
+  --main-bg: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+}
 
 /* Main Container */
 #mac-wrapper {
@@ -189,8 +189,7 @@
 
 #thumb-1 {
   margin-bottom: 10px;
-  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
-  background: var(---main-bg);
+  background: var(--main-bg); /* แก้ไขเป็น var(--main-bg) */
   cursor: pointer;
 }
 
@@ -211,7 +210,7 @@
   height: 430px;
   margin-left: 30px;
   box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
-  background: var(---main-bg);
+  background: var(--main-bg); /* แก้ไขเป็น var(--main-bg) */
 }
 
 /* ---------------- Floating Widget ---------------- */
@@ -361,7 +360,6 @@
   color: #ffffff;
 }
 
-/* ปุ่มสีฟ้า: ชี้แล้วเรืองแสงสีฟ้าอ่อน + สว่างขึ้น */
 #btn-primary:hover {
   background-color: rgba(55, 146, 237, 1);
   box-shadow: 0 0 12px rgba(55, 146, 237, 0.8), inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
@@ -374,7 +372,6 @@
   color: #ffffff;
 }
 
-/* ปุ่มสีเทา: ชี้แล้วเรืองแสงสีขาวนวล + สว่างขึ้น */
 #btn-secondary:hover {
   background-color: rgba(160, 160, 160, 0.85);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
@@ -387,7 +384,7 @@
 
 /* เมื่อเลือก Thumb 1 */
 #select-thumb-1:checked ~ #main-preview {
-  background: var(---main-bg);
+  background: var(--main-bg); /* แก้ไขเป็น var(--main-bg) */
 }
 #select-thumb-1:checked ~ #thumbnail-column #thumb-1 {
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
