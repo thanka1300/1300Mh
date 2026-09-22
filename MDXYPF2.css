@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap');
 
+:root {
+  --main-bg: url(https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg) 70% 100% / 150%;
+  }
+
 /* Main Container */
 #mac-wrapper {
   width: 750px;
@@ -186,7 +190,7 @@
 #thumb-1 {
   margin-bottom: 10px;
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
-  background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+  background: Var(---main-bg);
   cursor: pointer;
 }
 
@@ -207,7 +211,7 @@
   height: 430px;
   margin-left: 30px;
   box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
-  background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+  background: Var(---main-bg);
 }
 
 /* ---------------- Floating Widget ---------------- */
@@ -383,7 +387,7 @@
 
 /* เมื่อเลือก Thumb 1 */
 #select-thumb-1:checked ~ #main-preview {
-  background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+  background: Var(---main-bg);
 }
 #select-thumb-1:checked ~ #thumbnail-column #thumb-1 {
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
