@@ -1,365 +1,278 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Dongle&display=swap');
 
 :root {
-  --c-show: gray;
-  --c-main: gray;
-  --c-music: gray;
+  --SHOW:BLUE;
+  --CO:GREEN;
+  --MU:RED;
 }
 
-#txt-box {
-  width: 250px;
-  min-height: 300px;
-  background: linear-gradient(135deg, rgba(219,219,219,0.85), rgba(235,235,235,0.87));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
-  padding: 5px 0;
-  margin: auto;
-  transform: translate(3rem, 19rem);
-  position: absolute;
+#COM{
+  width:250px;
+  min-height:300px;
+  background:linear-gradient(135deg, rgb(219 219 219 / 85%), rgb(235 235 235 / 87%));
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255, 255, 255, 0.2);border-radius: 10px;
+  box-shadow:1px -1px 0px 0px rgb(203 203 203 / 29%);padding:5px 0px;
+  margin:auto;
+  transform:translate(3rem, 19rem);
+  position:absolute;
   color: #0c0c0c;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-size: 10px;
-  z-index: 10;
+  font-family:'Bai Jamjuree',sans-serif;
+  font-size:10px;
 }
 
-.indent {
-  padding: 2px 15px;
-  border-radius: 4px;
-  margin: 0 4px;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
-  user-select: none;
-}
+.IND { padding-left:15px; }
 
-.indent:hover {
-  background: linear-gradient(180deg, #2a82e4 0%, #1562bf 100%);
-  color: #ffffff;
-}
-
-.hr {
-  border: none;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.10);
+.HR {
+  border:none;
+  height:1px;
+  background:rgba(0, 0, 0, 0.10);
   margin: 6px 1px 5px;
 }
 
-.flex-tag {
-  display: flex;
-  flex-direction: row;
+.FLEX {
+  display:flex;
+  flex-direction:row;
   gap: 8px;
-  justify-content: flex-start;
-  padding: 5px 0;
+  justify-content:flex-start;
+  padding:5px 0;
 }
-
-.circle-tag {
-  width: 12px;
-  height: 12px;
+.CIRCLE {
+  width:12px;
+  height:12px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--circlecolor);
-  cursor: pointer;
-  transition: transform 0.15s ease;
+  border:1px solid rgba(0, 0, 0, 0.1);
+  background-color:var(--cc)
 }
 
-.circle-tag:hover {
-  transform: scale(1.2);
+.MAIN {
+  width:500px;
+  height:500px;
+  background:linear-gradient(135deg, rgb(219 219 219), rgb(235 235 235));
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding:5px 0px 10px;
+  margin:50px auto 200px;
 }
 
-.main {
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(135deg, rgb(219 219 219), rgb(235 235 235));
+.BAR1 {
+  max-width:490px;
+  height:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:nowrap;
+  flex-direction:row;
+  margin:auto;
+}
+  .BAR2 {
+    width:100px;
+    height:30px;
+    display:flex;
+    align-items:center;
+  }
+    .BARCIR {
+      width:20px;
+      height:20px;
+      background:var(--cc);
+      border-radius:100px;
+      margin:auto;
+    }
+      .BARNAME {
+        width:355px;
+        font-weight:700;
+        font-style:normal;
+        text-transform:uppercase;
+        font-size:23px;
+        text-align:center;
+        line-height:1;
+        color:#424242;
+      }
+
+.IMGFLEX {
+  max-width:98%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  align-items:flex-start;
+  justify-content:space-around;
+  margin:20px auto 0px;
+ }
+  .IMGCOL {
+    max-width:100px;
+    height:430px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    justify-content:center;
+ }
+  .IM1 {
+    width:90px;
+    height:130px;
+    margin:0px auto 10px;
+    box-shadow:0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
+    background:var(--SHOW);
+    display: block;
+   }    
+      .IM2 {
+        width:90px;
+        height:130px;
+        margin:10px auto;
+        box-shadow:0px 0px 0px 2px #fafafa;
+        background:var(--CO);
+    }     
+        .IMMAIN {
+          width:300px;
+          height:430px;
+          margin-left:30px;
+          box-shadow:-25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
+          background:var(--SHOW);
+        }
+
+.FACEID {
+  width:80px;
+  height:80px;
+  background:url(https://iili.io/KePFD1R.png) center/80% no-repeat, linear-gradient(135deg, rgb(0 0 0 / 64%), rgb(42 42 42));
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255, 255, 255, 0.2);
+  border-radius:15px;
+  box-shadow:1px -1px 0px 0px rgb(203 203 203 / 29%);
+  margin:20px auto 0px;
+  transform:translate(-15.5rem, -29rem)
+}
+
+.MUBOX {
+  width:150px;
+  min-height:200px;
+  background:linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235));
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 5px 0px 10px;
-  margin: 50px auto 200px;
-  position: relative;
-}
+  border-radius:15px;
+  box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%);
+  margin:auto;
+  transform:translate(17rem, -33rem);
+ }
 
-.bar-flex1 {
-  max-width: 490px;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
+.MUBAR {
+  max-width:130px;
+  height:20px;
+  display:flex;
+  justify-content:space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  margin: auto;
+  flex-wrap:nowrap;
+  flex-direction:row;
+  margin:auto;
 }
 
-.bar-flex2 {
-  width: 100px;
-  height: 30px;
-  display: flex;
-  align-items: center;
+.MUCIRFLEX {
+  width:35px;
+  height:10px;
+  display:flex;
+  align-items:center;
 }
 
-.bar-circle {
-  width: 20px;
-  height: 20px;
-  background: var(--circlecolor);
-  border-radius: 100px;
-  margin: auto;
+.MUCIR {
+  width:8px;
+  height:8px;
+  background:var(--cc);
+  border-radius:100px;
+  margin:auto;
+  display:inline-block;
 }
 
-.bar-name {
-  width: 355px;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 23px;
-  text-align: center;
-  line-height: 1;
+.MUMI {
+  width:100px;
+  font-weight:700;
+  font-style:normal;
+  text-transform:uppercase;
+  font-size:7px;
+  line-height:1;
   color: #424242;
-  font-family: 'Bai Jamjuree', sans-serif;
+  margin-left:20px;
 }
 
-.img-flex {
-  max-width: 98%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  margin: 20px auto 0px;
+.IMMU {
+  width:130px;
+  height:130px;
+  margin:0px auto;
+  background:var(--MU);
 }
 
-.img-col {
-  max-width: 100px;
-  height: 430px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
+.SONA {
+  width:100px;
+  font-weight:500;
+  font-style:normal;
+  text-align:center;
+  font-size:7px;
+  line-height:1;
+  color:#424242;
+  margin:5px auto 0px
 }
 
-.im1 {
-  width: 90px;
-  height: 130px;
-  margin: 0px auto 10px;
-  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
-  background: var(--c-show) center/cover no-repeat;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: block;
-  text-decoration: none;
-}
-
-.im2, .im3 {
-  width: 90px;
-  height: 130px;
-  margin: 10px auto;
-  box-shadow: 0px 0px 0px 2px #fafafa;
-  background: var(--c-main) center/cover no-repeat;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.im1:hover, .im2:hover, .im3:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 0px 0px 2px #3792ed, 0px 0px 10px rgba(55, 146, 237, 0.5);
-}
-
-.im1.active, .im2.active, .im3.active {
-  box-shadow: 0px 0px 0px 3px #1562bf, 0px 0px 12px rgba(21, 98, 191, 0.7);
-}
-
-.im-main {
-  width: 300px;
-  height: 430px;
-  margin-left: 30px;
-  box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
-  background: var(--c-show) center/cover no-repeat;
-  transition: background-image 0.3s ease-in-out;
-}
-
-.face-id {
-  width: 80px;
-  height: 80px;
-  background: url(https://iili.io/KePFD1R.png) center/80% no-repeat, linear-gradient(135deg, rgba(0, 0, 0, 0.64), rgb(42 42 42));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  box-shadow: 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
-  margin: 20px auto 0px;
-  transform: translate(-15.5rem, -29rem);
-}
-
-.m-box {
-  width: 150px;
-  min-height: 200px;
-  background: linear-gradient(135deg, rgba(219, 219, 219, 0.64), rgb(235 235 235));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  box-shadow: 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
-  margin: auto;
-  transform: translate(17rem, -33rem);
-}
-
-.mbar {
-  max-width: 130px;
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  margin: auto;
-}
-
-.mcir-flex {
-  width: 35px;
-  height: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.mcir {
-  width: 8px;
-  height: 8px;
-  background: var(--circlecolor);
-  border-radius: 100px;
-  margin: auto;
-  display: block;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.mcir:hover {
-  transform: scale(1.4);
-  box-shadow: 0 0 6px var(--circlecolor);
-}
-
-.m-name {
-  width: 100px;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 7px;
-  line-height: 1;
-  color: #424242;
-  margin-left: 20px;
-  font-family: 'Bai Jamjuree', sans-serif;
-}
-
-.im-mu {
-  width: 130px;
-  height: 130px;
-  margin: 0px auto;
-  background: var(--c-music) center/cover no-repeat;
-}
-
-.song-title {
-  width: 100px;
-  font-weight: 500;
-  font-style: normal;
-  text-align: center;
-  font-size: 7px;
-  line-height: 1;
-  color: #424242;
-  margin: 5px auto 0px;
-  font-family: 'Bai Jamjuree', sans-serif;
-}
-
-.play-tag {
-  width: 130px;
-  height: 35px;
-  margin: 0px auto;
+.PLTAG {
+  width:130px;
+  height:35px;
+  margin:0px auto;
   background: url(https://iili.io/KeiGAlf.png) 50% 50%/cover;
 }
 
-.popup {
+.POPMAIN {
   width: 250px;
   min-height: 230px;
-  background: linear-gradient(135deg, rgba(219, 219, 219, 0.64), rgb(235 235 235));
+  background: linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235));
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  box-shadow: 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
-  margin: auto;
-  padding-bottom: 20px;
-  transform: translate(13rem, -30rem);
+  box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%);
+  margin:auto;padding-bottom:20px;
+  transform:translate(13rem, -30rem);
 }
 
-.p-img {
-  width: 70px;
-  height: 70px;
-  margin: 20px auto 10px;
-  box-shadow: -1px 3px 6px 2px #6a6969;
+.PUMIM {
+  width:70px;
+  height:70px;
+  margin:20px auto 10px;
+  box-shadow:-1px 3px 6px 2px #6a6969;
   border: 5px solid #ffffff;
-  border-radius: 20px;
-  background: var(--MDXYPOPIM, gary) center/cover no-repeat;
+  border-radius:20px;
+  background:var(--POPIM);
 }
 
-.p-title {
-  font-size: 12px;
-  color: #3e3e3e;
-  font-weight: bold;
-  font-family: 'Bai Jamjuree', sans-serif;
-  margin: 5px auto;
-  text-align: center;
+.PUMTOPIC {
+  font-size:12px;
+  color:#3e3e3e;
+  font-weight:bold;
+  font-family:'Bai Jamjuree',sans-serif;
+  margin:5px auto;
+  text-align:center;
 }
-
-.p-txt {
-  color: #0c0c0c;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-size: 10px;
-  text-align: justify;
-  padding: 0px 10px;
-  margin: auto;
+.PUMTEXT {
+  color:#0c0c0c;
+  font-family:'Bai Jamjuree',sans-serif;
+  font-size:10px;
+  text-align:justify;
+  padding:0px 10px;
+  margin:auto;
 }
-
-.btn-blue {
-  width: 160px;
-  height: 15px;
-  background-color: rgba(55, 146, 237, 0.84);
-  border-radius: 5px;
-  padding: 5px 15px 10px;
-  box-shadow: inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
+.BBOX {
+  width:160px;
+  height:15px;
+  background-color: rgb(55 146 237 / 84%);
+  border-radius:5px;padding:5px 15px 10px;
+  box-shadow:inset 0px -3px 6px 0px rgb(25 72 131 / 39%);
+  border:1px solid rgba(255, 255, 255, 0.3);
+  margin:10px auto;font-size:12px;
+  text-align:center  
+}
+.GBOX {
+  width:160px;
+  height:15px;
+  background-color:rgb(131 131 131 / 60%);
+  border-radius:5px;padding:5px 15px 10px;
+  box-shadow: inset 0px -3px 6px 0px rgb(80 80 80 / 34%);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin: 10px auto;
-  font-size: 12px;
-  font-family: 'Bai Jamjuree', sans-serif;
-  text-align: center;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.btn-blue:hover {
-  background-color: rgba(30, 130, 230, 0.95);
-  box-shadow: inset 0px -3px 6px 0px rgba(25, 72, 131, 0.5),
-              0px 0px 12px rgba(55, 146, 237, 0.8),
-              0px 0px 20px rgba(55, 146, 237, 0.5);
-  transform: translateY(-1px);
-}
-
-.btn-gray {
-  width: 160px;
-  height: 15px;
-  background-color: rgba(131, 131, 131, 0.6);
-  border-radius: 5px;
-  padding: 5px 15px 10px;
-  box-shadow: inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin: 10px auto;
-  font-size: 12px;
-  font-family: 'Bai Jamjuree', sans-serif;
-  text-align: center;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.btn-gray:hover {
-  background-color: rgba(150, 150, 150, 0.8);
-  box-shadow: inset 0px -3px 6px 0px rgba(80, 80, 80, 0.5),
-              0px 0px 12px rgba(220, 220, 220, 0.8),
-              0px 0px 20px rgba(200, 200, 200, 0.5);
-  transform: translateY(-1px);
+  margin:10px auto;
+  font-size:12px;
+  text-align:center;
 }
