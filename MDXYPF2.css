@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap');
 
 :root {
-  --main-bg: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+  --thumb-1: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
   --thumb-2: url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%;
   --thumb-3: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
     }
 
-/* Main Container */
 #mac-wrapper {
   width: 750px;
   margin: auto;
@@ -14,7 +13,6 @@
   font-family: 'Bai Jamjuree', sans-serif;
 }
 
-/* Glassmorphism Base Theme */
 .glass-panel {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -22,7 +20,6 @@
   box-shadow: 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
 }
 
-/* ---------------- Context Menu ---------------- */
 #context-menu {
   width: 250px;
   min-height: auto;
@@ -46,7 +43,6 @@
   margin: 1px 4px;
 }
 
-/* เอฟเฟกต์เมื่อชี้เมาส์ที่เมนูแต่ละหัวข้อ (เรืองแสงสีฟ้าอ่อนแบบ macOS) */
 .menu-item:hover {
   background: rgba(55, 146, 237, 0.85);
   color: #ffffff;
@@ -97,7 +93,6 @@
 #dot-purple:hover { box-shadow: 0 0 8px #C759FF; }
 #dot-gray:hover   { box-shadow: 0 0 8px #C7C7C7; }
 
-/* ---------------- Main Finder Window ---------------- */
 #main-window {
   width: 500px;
   height: 500px;
@@ -191,7 +186,7 @@
 
 #thumb-1 {
   margin-bottom: 10px;
-  background: var(--main-bg); /* แก้ไขเป็น var(--main-bg) */
+  background: var(--thumb-1);
   cursor: pointer;
 }
 
@@ -212,10 +207,9 @@
   height: 430px;
   margin-left: 30px;
   box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
-  background: var(--main-bg); /* แก้ไขเป็น var(--main-bg) */
+  background: var(--thumb-1);
 }
 
-/* ---------------- Floating Widget ---------------- */
 #floating-icon {
   width: 80px;
   height: 80px;
@@ -231,7 +225,6 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
 }
 
-/* ---------------- Mini Player Widget ---------------- */
 #mini-player {
   width: 150px;
   min-height: 200px;
@@ -306,7 +299,6 @@
   background: url('https://iili.io/KeiGAlf.png') 50% 50% / cover;
 }
 
-/* ---------------- Dialog Box Widget ---------------- */
 #dialog-box {
   width: 250px;
   min-height: 230px;
@@ -342,7 +334,6 @@
   margin: auto;
 }
 
-/* ---------------- Main Buttons (Glow Effect) ---------------- */
 .btn {
   width: 160px;
   height: 15px;
@@ -380,19 +371,13 @@
   transform: translateY(-1px);
 }
 
-/* --------------------------------------------------
-   CSS-Only Logic (สลับภาพเมื่อ Radio ถูก Checked)
--------------------------------------------------- */
-
-/* เมื่อเลือก Thumb 1 */
 #select-thumb-1:checked ~ #main-preview {
-  background: var(--main-bg); /* แก้ไขเป็น var(--main-bg) */
+  background: var(--thumb-1);
 }
 #select-thumb-1:checked ~ #thumbnail-column #thumb-1 {
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
 }
 
-/* เมื่อเลือก Thumb 2 */
 #select-thumb-2:checked ~ #main-preview {
   background: var(--thumb-2);
 }
@@ -400,7 +385,6 @@
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
 }
 
-/* เมื่อเลือก Thumb 3 */
 #select-thumb-3:checked ~ #main-preview {
   background: var(--thumb-3);
 }
