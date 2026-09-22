@@ -1,723 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>macOS Desktop Interface & Widget Setup</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  
+  <title>Delphinus M. Quartier</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap');
 
-    * {
-      box-sizing: border-box;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: radial-gradient(circle at 50% 30%, #2c3440 0%, #11141a 100%);
-      font-family: 'Bai Jamjuree', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: hidden;
-      color: #0c0c0c;
-    }
-
-    /* Main Container Workspace */
-    #mac-wrapper {
-      width: 750px;
-      min-height: 700px;
-      margin: auto;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 0;
-    }
-
-    /* Glassmorphism Base Theme */
-    .glass-panel {
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    }
-
-    /* ---------------- Context Menu ---------------- */
-    #context-menu {
-      width: 250px;
-      background: linear-gradient(135deg, rgba(230, 230, 230, 0.88), rgba(210, 210, 210, 0.92));
-      border-radius: 10px;
-      padding: 6px 0;
-      position: absolute;
-      top: 40px;
-      left: 10px;
-      z-index: 50;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .menu-item {
-      padding: 5px 15px;
-      line-height: 1.4;
-      font-size: 11px;
+    /* ------------------------------
+       Hover Glow & Active Press Effects
+    ------------------------------ */
+    
+    /* Interactive Items Hover & Click Effects */
+    .menu-item-interactive {
+      padding-left: 15px;
       cursor: pointer;
-      color: #1a1a1a;
-      transition: all 0.15s ease-out;
-      border-radius: 5px;
-      margin: 1px 4px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      transition: all 0.2s ease;
+      border-radius: 4px;
+      margin: 1px 2px;
     }
-
-    .menu-item:hover {
-      background: rgba(55, 146, 237, 0.88);
+    .menu-item-interactive:hover {
+      background: rgba(55, 146, 237, 0.85);
       color: #ffffff;
-      box-shadow: 0 2px 10px rgba(55, 146, 237, 0.5);
+      box-shadow: 0 0 10px rgba(55, 146, 237, 0.6);
     }
-
-    .menu-item:active {
-      transform: scale(0.96) translateY(1px);
-      background: rgba(30, 115, 200, 0.95);
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .menu-divider {
-      border: none;
-      height: 1px;
-      background: rgba(0, 0, 0, 0.12);
-      margin: 5px 0;
-    }
-
-    #tag-dots {
-      display: flex;
-      flex-direction: row;
-      gap: 8px;
-      justify-content: flex-start;
-      padding: 6px 0;
-    }
-
-    .tag-dot {
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 0, 0, 0.15);
-      transition: all 0.15s ease-out;
-      cursor: pointer;
-    }
-
-    .tag-dot:hover {
-      transform: scale(1.25);
-    }
-
-    .tag-dot:active {
-      transform: scale(0.9);
-      filter: brightness(0.8);
-    }
-
-    #dot-red    { background-color: #FF5953; }
-    #dot-orange { background-color: #FFB94C; }
-    #dot-yellow { background-color: #FFD94C; }
-    #dot-green  { background-color: #75E259; }
-    #dot-blue   { background-color: #59C5FF; }
-    #dot-purple { background-color: #C759FF; }
-    #dot-gray   { background-color: #C7C7C7; }
-
-    #dot-red:hover    { box-shadow: 0 0 10px #FF5953; }
-    #dot-orange:hover { box-shadow: 0 0 10px #FFB94C; }
-    #dot-yellow:hover { box-shadow: 0 0 10px #FFD94C; }
-    #dot-green:hover  { box-shadow: 0 0 10px #75E259; }
-    #dot-blue:hover   { box-shadow: 0 0 10px #59C5FF; }
-    #dot-purple:hover { box-shadow: 0 0 10px #C759FF; }
-    #dot-gray:hover   { box-shadow: 0 0 10px #C7C7C7; }
-
-    /* ---------------- Main Finder Window ---------------- */
-    #main-window {
-      width: 500px;
-      height: 500px;
-      background: linear-gradient(135deg, rgba(225, 225, 225, 0.9), rgba(240, 240, 240, 0.85));
-      padding: 8px 0 12px;
-      position: relative;
-      z-index: 10;
-    }
-
-    #window-header {
-      max-width: 480px;
-      height: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: auto;
-      padding: 0 10px;
-    }
-
-    #traffic-lights {
-      width: 80px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .light {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      transition: all 0.15s ease-out;
-      cursor: pointer;
-    }
-
-    .light:hover {
-      transform: scale(1.2);
-    }
-
-    .light:active {
-      transform: scale(0.85);
-      filter: brightness(0.75);
-    }
-
-    .light-close { background: #d12828; }
-    .light-min   { background: #e2bd30; }
-    .light-max   { background: #24c620; }
-
-    .light-close:hover { box-shadow: 0 0 10px rgba(209, 40, 40, 0.9); }
-    .light-min:hover   { box-shadow: 0 0 10px rgba(226, 189, 48, 0.9); }
-    .light-max:hover   { box-shadow: 0 0 10px rgba(36, 198, 32, 0.9); }
-
-    #window-title {
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 20px;
-      text-align: center;
-      color: #333333;
-      letter-spacing: 0.5px;
-    }
-
-    #window-body {
-      max-width: 96%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-around;
-      margin: 15px auto 0;
-    }
-
-    #thumbnail-column {
-      width: 100px;
-      height: 420px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 12px;
-      padding-top: 10px;
-    }
-
-    .thumb-item {
-      width: 85px;
-      height: 120px;
-      margin: 0 auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease-out;
-      cursor: pointer;
-    }
-
-    .thumb-item:hover {
-      transform: scale(1.06) translateY(-2px);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .thumb-item:active {
-      transform: scale(0.94) translateY(1px);
-      filter: brightness(0.85);
-    }
-
-    .thumb-item.active {
-      box-shadow: 0 0 0 2px #ffffff, 0 0 0 6px #3792ed, 0 0 15px rgba(55, 146, 237, 0.8) !important;
-    }
-
-    #thumb-1 {
-      background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
-    }
-
-    #thumb-2 {
-      background: url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%;
-    }
-
-    #thumb-3 {
-      background: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
-    }
-
-    /* Main Preview Screen */
-    #main-preview {
-      width: 300px;
-      height: 420px;
-      margin-left: 20px;
-      border-radius: 8px;
-      box-shadow: -20px 0 0 12px #a3a3a3, 8px 0 0 12px #a3a3a3, 0 10px 25px rgba(0,0,0,0.2);
-      background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
-      transition: background 0.3s ease, opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: zoom-in;
-    }
-
-    #main-preview:hover {
-      transform: scale(1.02);
-      box-shadow: -20px 0 0 12px #a3a3a3, 8px 0 0 12px #a3a3a3, 0 0 20px rgba(255, 255, 255, 0.7);
-    }
-
-    #main-preview:active {
+    .menu-item-interactive:active {
       transform: scale(0.98);
-      filter: brightness(0.9);
     }
 
-    /* ---------------- Floating Icon Widget ---------------- */
-    #floating-icon {
-      width: 80px;
-      height: 80px;
-      background: url('https://iili.io/KePFD1R.png') center / 80% no-repeat, linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgb(42, 42, 42));
-      position: absolute;
-      bottom: 60px;
-      left: 30px;
-      z-index: 40;
-      transition: all 0.15s ease-out;
+    /* Tag Dots Hover & Click */
+    .tag-dot-item {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tag-dot-item:hover {
+      transform: scale(1.3);
+      box-shadow: 0 0 8px currentColor;
+    }
+    .tag-dot-item:active {
+      transform: scale(0.9);
     }
 
-    #floating-icon:hover {
-      transform: scale(1.1) rotate(-3deg);
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-    }
-
-    #floating-icon:active {
-      transform: scale(0.92) rotate(2deg);
-      filter: brightness(0.8);
-      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    /* ---------------- Mini Player Widget ---------------- */
-    #mini-player {
-      width: 160px;
-      min-height: 210px;
-      background: linear-gradient(135deg, rgba(220, 220, 220, 0.75), rgba(240, 240, 240, 0.85));
-      position: absolute;
-      top: 30px;
-      right: 20px;
-      z-index: 30;
-      padding: 8px;
-    }
-
-    #player-header {
-      width: 100%;
+    /* Window Traffic Lights */
+    .traffic-dot {
+      width: 20px;
       height: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-
-    #player-controls {
-      display: flex;
-      gap: 4px;
-    }
-
-    .player-btn {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      transition: all 0.15s ease-out;
+      border-radius: 100px;
+      margin: auto;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .traffic-dot:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px currentColor;
+    }
+    .traffic-dot:active {
+      transform: scale(0.9);
     }
 
-    .player-btn:hover {
-      transform: scale(1.4);
-    }
-
-    .player-btn:active {
-      transform: scale(0.8);
-    }
-
-    #player-title {
-      font-weight: 700;
-      font-size: 8px;
-      color: #424242;
-      letter-spacing: 0.5px;
-    }
-
-    #album-art {
-      width: 135px;
-      height: 125px;
-      margin: 0 auto;
-      border-radius: 8px;
-      background: url('https://i.pinimg.com/736x/9e/61/5c/9e615c4cb2ac46fc47e3f5d1af0b4f55.jpg') 50% 50% / cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: all 0.2s ease;
+    /* Thumbnail Hover & Active State */
+    .thumb-box {
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
-    #album-art:hover {
-      transform: scale(1.04);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    .thumb-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 12px rgba(255, 255, 255, 0.9) !important;
     }
-
-    #album-art:active {
+    .thumb-box:active {
       transform: scale(0.95);
-      filter: brightness(0.85);
     }
 
-    #song-title {
-      font-weight: 600;
+    /* Dialog Buttons Hover & Glow */
+    .dialog-btn {
+      width: 160px;
+      height: 15px;
+      border-radius: 5px;
+      padding: 5px 15px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 10px auto;
+      font-size: 12px;
       text-align: center;
-      font-size: 8px;
-      color: #333333;
-      margin: 6px auto 2px;
-    }
-
-    #player-wave {
-      width: 135px;
-      height: 30px;
-      margin: 0 auto;
-      background: url('https://iili.io/KeiGAlf.png') 50% 50% / cover;
-      opacity: 0.85;
-    }
-
-    /* ---------------- Dialog Box Widget ---------------- */
-    #dialog-box {
-      width: 260px;
-      background: linear-gradient(135deg, rgba(225, 225, 225, 0.75), rgba(240, 240, 240, 0.88));
-      position: absolute;
-      bottom: 20px;
-      right: 30px;
-      z-index: 35;
-      padding: 12px 15px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #avatar {
-      width: 70px;
-      height: 70px;
-      margin: 5px auto 10px;
-      box-shadow: -1px 3px 8px rgba(0, 0, 0, 0.3);
-      border: 4px solid #ffffff;
-      border-radius: 20px;
-      background: url('https://i.pinimg.com/736x/51/27/cb/5127cb71d8db89b7cc931cd9bc6db913.jpg') 50% 50% / cover;
-      transition: all 0.15s ease-out;
       cursor: pointer;
-    }
-
-    #avatar:hover {
-      transform: scale(1.08) rotate(3deg);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-    }
-
-    #avatar:active {
-      transform: scale(0.92);
-      filter: brightness(0.85);
-    }
-
-    #dialog-heading {
-      font-size: 13px;
-      color: #2c2c2c;
-      font-weight: 700;
-      margin: 4px auto;
-      text-align: center;
-    }
-
-    #dialog-text {
-      color: #111111;
-      font-size: 10px;
-      line-height: 1.4;
-      text-align: center;
-      padding: 0 5px;
-      margin: 4px auto 12px;
-    }
-
-    /* ---------------- Buttons (Glow Effect + Click Press) ---------------- */
-    .btn {
-      width: 170px;
-      height: 28px;
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      margin: 5px auto;
-      font-size: 11px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.15s ease-out;
-    }
-
-    #btn-primary {
-      background-color: rgba(55, 146, 237, 0.88);
-      box-shadow: inset 0 -2px 4px rgba(25, 72, 131, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
       color: #ffffff;
-    }
-
-    #btn-primary:hover {
-      background-color: rgba(55, 146, 237, 1);
-      box-shadow: 0 0 15px rgba(55, 146, 237, 0.85), inset 0 -2px 4px rgba(25, 72, 131, 0.4);
-      transform: translateY(-1px);
-    }
-
-    #btn-primary:active {
-      transform: translateY(1px) scale(0.96);
-      background-color: rgba(30, 115, 200, 1);
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
-    }
-
-    #btn-secondary {
-      background-color: rgba(140, 140, 140, 0.65);
-      box-shadow: inset 0 -2px 4px rgba(60, 60, 60, 0.3), 0 2px 6px rgba(0, 0, 0, 0.15);
-      color: #ffffff;
-    }
-
-    #btn-secondary:hover {
-      background-color: rgba(160, 160, 160, 0.85);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), inset 0 -2px 4px rgba(60, 60, 60, 0.3);
-      transform: translateY(-1px);
-    }
-
-    #btn-secondary:active {
-      transform: translateY(1px) scale(0.96);
-      background-color: rgba(100, 100, 100, 0.9);
-      box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    /* ---------------- Image Zoom Modal ---------------- */
-    #image-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    #image-modal.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    #modal-content {
-      position: relative;
-      max-width: 85vw;
-      max-height: 85vh;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.2);
-      transform: scale(0.9);
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    #image-modal.open #modal-content {
-      transform: scale(1);
-    }
-
-    #modal-img {
-      display: block;
-      max-width: 85vw;
-      max-height: 80vh;
-      object-fit: contain;
-    }
-
-    #modal-close-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 32px;
-      height: 32px;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 50%;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      cursor: pointer;
       transition: all 0.2s ease;
     }
-
-    #modal-close-btn:hover {
-      background: rgba(255, 255, 255, 0.45);
-      transform: scale(1.15);
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+    .btn-blue {
+      background-color: rgba(55, 146, 237, 0.84);
+      box-shadow: inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
+    }
+    .btn-blue:hover {
+      background-color: rgba(55, 146, 237, 1);
+      box-shadow: 0 0 14px rgba(55, 146, 237, 0.8), inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
+    }
+    .btn-gray {
+      background-color: rgba(131, 131, 131, 0.60);
+      box-shadow: inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
+    }
+    .btn-gray:hover {
+      background-color: rgba(160, 160, 160, 0.85);
+      box-shadow: 0 0 14px rgba(255, 255, 255, 0.6), inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
+    }
+    .dialog-btn:active {
+      transform: scale(0.95);
     }
 
-    #modal-close-btn:active {
-      transform: scale(0.9);
+    /* Main Preview Smooth Transition */
+    #main-preview {
+      transition: background 0.3s ease, opacity 0.2s ease;
     }
   </style>
 </head>
-<body>
+<body style="margin: 0; padding: 20px 0; background: #2b2b2b;">
 
-  <div id="mac-wrapper">
-
-    <!-- Context Menu Widget -->
-    <div id="context-menu" class="glass-panel">
-      <div class="menu-item">Open Open With</div>
-      <div class="menu-divider"></div>
-      <div class="menu-item">Move to Trash</div>
-      <div class="menu-divider"></div>
-      <div class="menu-item">Get Info</div>
-      <div class="menu-item">Compress “MDXY-LoV-Raccoon.jpg”</div>
-      <div class="menu-item">Burn “MDXY-LoV-Raccoon.jpg” to Disc…</div>
-      <div class="menu-item">Duplicate</div>
-      <div class="menu-item">Make Alias</div>
-      <div class="menu-item">Quick Look “MDXY-LoV-Raccoon.jpg”</div>
-      <div class="menu-item">Share</div>
-      <div class="menu-divider"></div>
-      <div class="menu-item">Copy “MDXY-LoV-Raccoon.jpg”</div>
-      <div class="menu-item">Clean Up Selection Show View Options</div>
-      <div class="menu-divider"></div>
-      <div class="menu-item" style="flex-direction: column; align-items: flex-start;">
-        <span>Tags…</span>
-        <div id="tag-dots">
-          <div id="dot-red" class="tag-dot"></div>
-          <div id="dot-orange" class="tag-dot"></div>
-          <div id="dot-yellow" class="tag-dot"></div>
-          <div id="dot-green" class="tag-dot"></div>
-          <div id="dot-blue" class="tag-dot"></div>
-          <div id="dot-purple" class="tag-dot"></div>
-          <div id="dot-gray" class="tag-dot"></div>
-        </div>
-      </div>
-      <div class="menu-item">Reveal in Finder</div>
+  <div style="width: 750px; margin: auto;"> 
+    
+    <!-- Context Menu Widget (ตำแหน่ง transform ตามโค้ดเดิม) -->
+    <div style="width:250px; min-height:300px; background:linear-gradient(135deg, rgb(219 219 219 / 85%), rgb(235 235 235 / 87%)); backdrop-filter:blur(10px); border:1px solid rgba(255, 255, 255, 0.2);border-radius: 10px; box-shadow:1px -1px 0px 0px rgb(203 203 203 / 29%);padding:5px 0px; margin:auto; transform:translate(3rem, 19rem); position:absolute; color: #0c0c0c; font-family:'Bai Jamjuree',sans-serif; font-size:10px;"> 
+      <div class="menu-item-interactive">Open Open With</div> 
+      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
+      <div class="menu-item-interactive">Move to Trash</div> 
+      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
+      <div>
+        <div class="menu-item-interactive">Get Info</div>
+        <div class="menu-item-interactive">Compress “MDXY-LoV-Raccoon.jpg”</div>
+        <div class="menu-item-interactive">Burn “MDXY-LoV-Raccoon.jpg” to Disc…</div>
+        <div class="menu-item-interactive">Duplicate</div>
+        <div class="menu-item-interactive">Make Alias</div>
+        <div class="menu-item-interactive">Quick Look “MDXY-LoV-Raccoon.jpg”</div>
+        <div class="menu-item-interactive">Share</div>
+      </div> 
+      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
+      <div class="menu-item-interactive">Copy “MDXY-LoV-Raccoon.jpg”</div> 
+      <div class="menu-item-interactive">Clean Up Selection Show View Options</div> 
+      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
+      <div style="padding-left: 15px;">Tags… 
+        <div style="display: flex; flex-direction: row; gap: 8px; justify-content: flex-start; padding: 5px 0;"> 
+          <div class="tag-dot-item" style="background-color: #FF5953; color: #FF5953;"></div> 
+          <div class="tag-dot-item" style="background-color: #FFB94C; color: #FFB94C;"></div> 
+          <div class="tag-dot-item" style="background-color: #FFD94C; color: #FFD94C;"></div> 
+          <div class="tag-dot-item" style="background-color: #75E259; color: #75E259;"></div> 
+          <div class="tag-dot-item" style="background-color: #59C5FF; color: #59C5FF;"></div> 
+          <div class="tag-dot-item" style="background-color: #C759FF; color: #C759FF;"></div> 
+          <div class="tag-dot-item" style="background-color: #C7C7C7; color: #C7C7C7;"></div> 
+        </div> 
+        <div class="menu-item-interactive" style="padding-left: 0;">Reveal in Finder</div>
+      </div> 
     </div>
 
-    <!-- Main Finder Window Widget -->
-    <div id="main-window" class="glass-panel">
-      <div id="window-header">
-        <div id="traffic-lights">
-          <div class="light light-close"></div>
-          <div class="light light-min"></div>
-          <div class="light light-max"></div>
-        </div>
-        <div id="window-title">Delphinus M. Quartier</div>
-      </div>
-      <div id="window-body">
-        <div id="thumbnail-column">
-          <div id="thumb-1" class="thumb-item active" 
-               data-bg="https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg" 
-               data-position="70% 100% / 150%"
-               onclick="changePreview(this)"></div>
+    <!-- Main Finder Window -->
+    <div style="width: 500px; height: 500px; background: linear-gradient(135deg, rgb(219 219 219), rgb(235 235 235)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 5px 0px 10px; margin: 50px auto 200px; font-family: 'Bai Jamjuree', sans-serif;"> 
+      <div style="max-width: 490px; height: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; flex-direction: row; margin: auto;"> 
+        <div style="width: 100px; height: 30px; display: flex; align-items: center;"> 
+          <div class="traffic-dot" style="background: #d12828; color: #d12828;"></div> 
+          <div class="traffic-dot" style="background: #e2bd30; color: #e2bd30;"></div> 
+          <div class="traffic-dot" style="background: #24c620; color: #24c620;"></div> 
+        </div> 
+        <div style="width: 355px; font-weight: 700; font-style: normal; text-transform: uppercase; font-size: 23px; text-align: center; line-height: 1; color: #424242;">Delphinus M. Quartier</div> 
+      </div> 
+      <div style="max-width: 98%; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: space-around; margin: 20px auto 0px;"> 
+        <div style="max-width: 100px; height: 430px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center;"> 
+          
+          <!-- Thumb 1 -->
+          <div class="thumb-box" 
+               onclick="changePreview('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg', '70% 100% / 150%')"
+               style="width: 90px; height: 130px; margin: 0px auto 10px; box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3; background: url(https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg) 70% 100% / 150%; display: block;"></div> 
+          
+          <!-- Thumb 2 -->
+          <div class="thumb-box" 
+               onclick="changePreview('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg', '60% 40% / 130%')"
+               style="width: 90px; height: 130px; margin: 10px auto; box-shadow: 0px 0px 0px 2px #fafafa; background: url(https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg) 60% 40% / 130%;"></div> 
+          
+          <!-- Thumb 3 -->
+          <div class="thumb-box" 
+               onclick="changePreview('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg', '50% 50% / cover')"
+               style="width: 90px; height: 130px; margin: 10px auto; box-shadow: 0px 0px 0px 2px #fafafa; background: url(https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg) 50% 50% / cover;"></div> 
+        </div> 
 
-          <div id="thumb-2" class="thumb-item" 
-               data-bg="https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg" 
-               data-position="60% 40% / 130%"
-               onclick="changePreview(this)"></div>
-
-          <div id="thumb-3" class="thumb-item" 
-               data-bg="https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg" 
-               data-position="50% 50% / cover"
-               onclick="changePreview(this)"></div>
-        </div>
-        <div id="main-preview" onclick="openZoomModal()"></div>
+        <!-- Main Preview -->
+        <div id="main-preview" style="width: 300px; height: 430px; margin-left: 30px; box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3; background: url(https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg) 70% 100% / 150%;"></div> 
       </div>
     </div>
 
-    <!-- Floating Icon Widget -->
-    <div id="floating-icon" class="glass-panel"></div>
+    <!-- Floating Icon (ตำแหน่ง transform ตามโค้ดเดิม) -->
+    <div style="width: 80px; height: 80px; background: url(https://iili.io/KePFD1R.png) center / 80% no-repeat, linear-gradient(135deg, rgb(0 0 0 / 64%), rgb(42 42 42)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%); margin: 20px auto 0px; transform: translate(-15.5rem, -29rem);"></div> 
 
-    <!-- Mini Player Widget -->
-    <div id="mini-player" class="glass-panel">
-      <div id="player-header">
-        <div id="player-controls">
-          <div class="player-btn light-close"></div>
-          <div class="player-btn light-min"></div>
-          <div class="player-btn light-max"></div>
-        </div>
-        <div id="player-title">MINIPLAY</div>
-      </div>
-      <div id="album-art"></div>
-      <div id="song-title">BOYNEXTDOOR - I Feel Good</div>
-      <div id="player-wave"></div>
-    </div>
+    <!-- Mini Player Widget (ตำแหน่ง transform ตามโค้ดเดิม) -->
+    <div style="width: 150px; min-height: 200px; background: linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%); margin: auto; transform: translate(17rem, -33rem); font-family: 'Bai Jamjuree', sans-serif;"> 
+      <div style="max-width: 130px; height: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; flex-direction: row; margin: auto;"> 
+        <div style="width: 35px; height: 10px; display: flex; align-items: center;"> 
+          <div style="width: 8px; height: 8px; background: #d12828; border-radius: 100px; margin: auto; display: inline-block;"></div> 
+          <div style="width: 8px; height: 8px; background: #e2bd30; border-radius: 100px; margin: auto; display: inline-block;"></div> 
+          <div style="width: 8px; height: 8px; background: #24c620; border-radius: 100px; margin: auto; display: inline-block;"></div> 
+        </div> 
+        <div style="width: 100px; font-weight: 700; font-style: normal; text-transform: uppercase; font-size: 7px; line-height: 1; color: #424242; margin-left: 20px;">MINIPLAY</div> 
+      </div> 
+      <div style="width: 130px; height: 130px; margin: 0px auto; background: url(https://i.pinimg.com/736x/9e/61/5c/9e615c4cb2ac46fc47e3f5d1af0b4f55.jpg) 50% 50% / cover;"></div> 
+      <div style="width: 100px; font-weight: 500; font-style: normal; text-align: center; font-size: 7px; line-height: 1; color: #424242; margin: 5px auto 0px;">BOYNEXTDOOR - I Feel Good</div> 
+      <div style="width: 130px; height: 35px; margin: 0px auto; background: url(https://iili.io/KeiGAlf.png) 50% 50% / cover;"></div> 
+    </div> 
 
-    <!-- Dialog Box Widget -->
-    <div id="dialog-box" class="glass-panel">
-      <div id="avatar"></div>
-      <div id="dialog-heading">Is that you, raccoon boy?</div>
-      <div id="dialog-text">
-        The young raccoon arrived at the lake and shouted loudly, “Hey! Is there anyone there? Where are you?
-      </div>
-      <div id="btn-primary" class="btn">Yes, that's me!</div>
-      <div id="btn-secondary" class="btn">Give me all your money!</div>
-    </div>
+    <!-- Dialog Box Widget (ตำแหน่ง transform ตามโค้ดเดิม) -->
+    <div style="width: 250px; min-height: 230px; background: linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%); margin: auto; padding-bottom: 20px; transform: translate(13rem, -30rem); font-family: 'Bai Jamjuree', sans-serif;"> 
+      <div style="width: 70px; height: 70px; margin: 20px auto 10px; box-shadow: -1px 3px 6px 2px #6a6969; border: 5px solid #ffffff; border-radius: 20px; background: url(https://i.pinimg.com/736x/51/27/cb/5127cb71d8db89b7cc931cd9bc6db913.jpg) 50% 50% / cover;"></div> 
+      <div style="font-size: 12px; color: #3e3e3e; font-weight: bold; margin: 5px auto; text-align: center;">Is that you, raccoon boy?</div> 
+      <div style="color: #0c0c0c; font-size: 10px; text-align: justify; padding: 0px 10px; margin: auto;">The young raccoon arrived at the lake and shouted loudly, “Hey! Is there anyone there? Where are you? Are you in the lake? Come out at once! Let me see you!</div> 
+      
+      <div class="dialog-btn btn-blue">Yes, that's me!</div> 
+      <div class="dialog-btn btn-gray">Give me all your money!</div> 
+    </div> 
 
   </div>
 
-  <!-- Fullscreen Image Zoom Modal Popup -->
-  <div id="image-modal" onclick="closeZoomModal(event)">
-    <div id="modal-close-btn" onclick="closeZoomModal(event)">✕</div>
-    <div id="modal-content" onclick="event.stopPropagation()">
-      <img id="modal-img" src="" alt="Full Preview">
-    </div>
-  </div>
-
+  <!-- JavaScript สลับรูปเมื่อคลิก Thumb -->
   <script>
-    // Current Active Image State Tracker
-    let currentActiveImgUrl = 'https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg';
-
-    // Dynamic Thumbnail Selection & Smooth Preview Fade Switcher
-    function changePreview(element) {
-      const mainPreview = document.getElementById('main-preview');
-      const bgUrl = element.getAttribute('data-bg');
-      const bgPos = element.getAttribute('data-position') || '50% 50% / cover';
-
-      currentActiveImgUrl = bgUrl;
-
-      // Soft transition fade effect
-      mainPreview.style.opacity = '0.3';
-
+    function changePreview(bgUrl, bgStyle) {
+      const preview = document.getElementById('main-preview');
+      preview.style.opacity = '0.3';
       setTimeout(() => {
-        mainPreview.style.background = `url('${bgUrl}') ${bgPos}`;
-        mainPreview.style.opacity = '1';
+        preview.style.background = `url(${bgUrl}) ${bgStyle}`;
+        preview.style.opacity = '1';
       }, 150);
-
-      // Active Thumbnail Border Highlight Update
-      document.querySelectorAll('.thumb-item').forEach(thumb => {
-        thumb.classList.remove('active');
-      });
-      element.classList.add('active');
     }
-
-    // Modal Popup Controls for Image Zoom Effect
-    function openZoomModal() {
-      const modal = document.getElementById('image-modal');
-      const modalImg = document.getElementById('modal-img');
-
-      modalImg.src = currentActiveImgUrl;
-      modal.classList.add('open');
-    }
-
-    function closeZoomModal(event) {
-      if (event) event.stopPropagation();
-      const modal = document.getElementById('image-modal');
-      modal.classList.remove('open');
-    }
-
-    // ESC Key listener to close zoom modal
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeZoomModal();
-      }
-    });
   </script>
 </body>
 </html>
