@@ -190,7 +190,7 @@
 #thumb-1 {
   margin-bottom: 10px;
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
-  background: Var(---main-bg);
+  background: var(---main-bg);
   cursor: pointer;
 }
 
@@ -211,7 +211,7 @@
   height: 430px;
   margin-left: 30px;
   box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
-  background: Var(---main-bg);
+  background: var(---main-bg);
 }
 
 /* ---------------- Floating Widget ---------------- */
@@ -387,7 +387,7 @@
 
 /* เมื่อเลือก Thumb 1 */
 #select-thumb-1:checked ~ #main-preview {
-  background: Var(---main-bg);
+  background: var(---main-bg);
 }
 #select-thumb-1:checked ~ #thumbnail-column #thumb-1 {
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
