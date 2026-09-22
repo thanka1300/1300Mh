@@ -33,6 +33,12 @@
 .menu-item {
   padding-left: 15px;
   line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 
 .menu-divider {
@@ -55,6 +61,12 @@
   height: 12px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.tag-dot:hover {
+  transform: scale(1.2);
 }
 
 #dot-red    { background-color: #FF5953; }
@@ -64,6 +76,14 @@
 #dot-blue   { background-color: #59C5FF; }
 #dot-purple { background-color: #C759FF; }
 #dot-gray   { background-color: #C7C7C7; }
+
+#dot-red:hover    { box-shadow: 0 0 8px #FF5953; }
+#dot-orange:hover { box-shadow: 0 0 8px #FFB94C; }
+#dot-yellow:hover { box-shadow: 0 0 8px #FFD94C; }
+#dot-green:hover  { box-shadow: 0 0 8px #75E259; }
+#dot-blue:hover   { box-shadow: 0 0 8px #59C5FF; }
+#dot-purple:hover { box-shadow: 0 0 8px #C759FF; }
+#dot-gray:hover   { box-shadow: 0 0 8px #C7C7C7; }
 
 /* ---------------- Main Finder Window ---------------- */
 #main-window {
@@ -97,11 +117,21 @@
   height: 20px;
   border-radius: 100px;
   margin: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.light:hover {
+  transform: scale(1.15);
 }
 
 .light-close { background: #d12828; }
 .light-min   { background: #e2bd30; }
 .light-max   { background: #24c620; }
+
+.light-close:hover { box-shadow: 0 0 10px rgba(209, 40, 40, 0.8); }
+.light-min:hover   { box-shadow: 0 0 10px rgba(226, 189, 48, 0.8); }
+.light-max:hover   { box-shadow: 0 0 10px rgba(36, 198, 32, 0.8); }
 
 #window-title {
   width: 355px;
@@ -138,6 +168,13 @@
   margin: 10px auto;
   box-shadow: 0px 0px 0px 2px #fafafa;
   display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.thumb-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 12px rgba(255, 255, 255, 0.9);
 }
 
 #thumb-1 {
@@ -145,6 +182,10 @@
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
   background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
   cursor: pointer;
+}
+
+#thumb-1:hover {
+  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3, 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 #thumb-2 {
@@ -170,6 +211,13 @@
   background: url('https://iili.io/KePFD1R.png') center / 80% no-repeat, linear-gradient(135deg, rgba(0, 0, 0, 0.64), rgb(42, 42, 42));
   margin: 20px auto 0px;
   transform: translate(-15.5rem, -39rem);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#floating-icon:hover {
+  transform: translate(-15.5rem, -39rem) scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
 }
 
 /* ---------------- Mini Player Widget ---------------- */
@@ -205,6 +253,12 @@
   border-radius: 100px;
   margin: auto;
   display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.player-btn:hover {
+  transform: scale(1.3);
 }
 
 #player-title {
@@ -277,6 +331,7 @@
   margin: auto;
 }
 
+/* ---------------- Main Buttons (Glow Effect) ---------------- */
 .btn {
   width: 160px;
   height: 15px;
@@ -287,6 +342,7 @@
   font-size: 12px;
   text-align: center;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #btn-primary {
@@ -295,8 +351,22 @@
   color: #ffffff;
 }
 
+/* ปุ่มสีฟ้า: ชี้แล้วเรืองแสงสีฟ้าอ่อน + สว่างขึ้น */
+#btn-primary:hover {
+  background-color: rgba(55, 146, 237, 1);
+  box-shadow: 0 0 12px rgba(55, 146, 237, 0.8), inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
+  transform: translateY(-1px);
+}
+
 #btn-secondary {
   background-color: rgba(131, 131, 131, 0.60);
   box-shadow: inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
   color: #ffffff;
+}
+
+/* ปุ่มสีเทา: ชี้แล้วเรืองแสงสีขาวนวล + สว่างขึ้น */
+#btn-secondary:hover {
+  background-color: rgba(160, 160, 160, 0.85);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
+  transform: translateY(-1px);
 }
