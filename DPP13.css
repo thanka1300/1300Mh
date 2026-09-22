@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.card-main {
+  width: 750px;
+  height: 750px;
+  border-radius: 15px 15px 0px 0px;
+  border: 0px solid #fff;
+  margin: 137.5px auto 0px;
+}
+
+.card-footer {
+  --bg-footer: #e8e8e8;
+  --text-main: #565656;
+  --line-color: #565656;
+
+  width: 750px;
+  height: 200px;
+  background-color: var(--bg-footer);
+  border-radius: 0px 0px 15px 15px;
+  border: 0px solid #fff;
+  margin: 0px auto 30px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  display: flex;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-footer.dark {
+  --bg-footer: #181818;
+  --text-main: #e0e0e0;
+  --line-color: #e0e0e0;
+}
+
+.card-avatar {
+  width: 250px;
+  height: 250px;
+  margin-left: 30px;
+}
+
+.card-info {
+  width: 410px;
+  font-size: 16px;
+  color: var(--text-main);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+.card-date-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-date {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-line {
+  flex: 1;
+  height: 2px;
+  background: var(--line-color);
+}
+
+.card-uname {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.card-fullname {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.card-bio {
+  font-size: 14px;
+}
+
+.card-role {
+  font-weight: bold;
+  line-height: 2.8;
+}
+
+.card-divider {
+  flex: 1;
+  height: 2px;
+  background: var(--line-color);
+  margin: 10px 0px;
+}
+
+.card-barcode {
+  font-size: 85px;
+  font-family: 'Libre Barcode 39', cursive;
+  margin-top: 10px;
+  line-height: 1;
+}
