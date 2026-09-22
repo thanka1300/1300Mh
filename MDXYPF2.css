@@ -1,230 +1,378 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <title>Delphinus M. Quartier</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap');
 
-    /* ------------------------------
-       Hover Glow & Active Press Effects
-    ------------------------------ */
-    
-    /* Interactive Items Hover & Click Effects */
-    .menu-item-interactive {
-      padding-left: 15px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border-radius: 4px;
-      margin: 1px 2px;
-    }
-    .menu-item-interactive:hover {
-      background: rgba(55, 146, 237, 0.85);
-      color: #ffffff;
-      box-shadow: 0 0 10px rgba(55, 146, 237, 0.6);
-    }
-    .menu-item-interactive:active {
-      transform: scale(0.98);
-    }
+/* Main Container */
+#mac-wrapper {
+  width: 750px;
+  margin: auto;
+  position: relative;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
 
-    /* Tag Dots Hover & Click */
-    .tag-dot-item {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .tag-dot-item:hover {
-      transform: scale(1.3);
-      box-shadow: 0 0 8px currentColor;
-    }
-    .tag-dot-item:active {
-      transform: scale(0.9);
-    }
+/* Glassmorphism Base Theme */
+.glass-panel {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
+}
 
-    /* Window Traffic Lights */
-    .traffic-dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 100px;
-      margin: auto;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .traffic-dot:hover {
-      transform: scale(1.2);
-      box-shadow: 0 0 10px currentColor;
-    }
-    .traffic-dot:active {
-      transform: scale(0.9);
-    }
+/* ---------------- Context Menu ---------------- */
+#context-menu {
+  width: 250px;
+  min-height: auto;
+  background: linear-gradient(135deg, rgba(219, 219, 219, 0.85), rgba(235, 235, 235, 0.87));
+  border-radius: 10px;
+  padding: 6px 0px;
+  margin: auto;
+  transform: translate(3rem, 19rem);
+  position: absolute;
+  color: #0c0c0c;
+  font-size: 11px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-    /* Thumbnail Hover & Active State */
-    .thumb-box {
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .thumb-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 12px rgba(255, 255, 255, 0.9) !important;
-    }
-    .thumb-box:active {
-      transform: scale(0.95);
-    }
+.menu-item {
+  padding: 4px 15px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  margin: 1px 4px;
+}
 
-    /* Dialog Buttons Hover & Glow */
-    .dialog-btn {
-      width: 160px;
-      height: 15px;
-      border-radius: 5px;
-      padding: 5px 15px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      margin: 10px auto;
-      font-size: 12px;
-      text-align: center;
-      cursor: pointer;
-      color: #ffffff;
-      transition: all 0.2s ease;
-    }
-    .btn-blue {
-      background-color: rgba(55, 146, 237, 0.84);
-      box-shadow: inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
-    }
-    .btn-blue:hover {
-      background-color: rgba(55, 146, 237, 1);
-      box-shadow: 0 0 14px rgba(55, 146, 237, 0.8), inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
-    }
-    .btn-gray {
-      background-color: rgba(131, 131, 131, 0.60);
-      box-shadow: inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
-    }
-    .btn-gray:hover {
-      background-color: rgba(160, 160, 160, 0.85);
-      box-shadow: 0 0 14px rgba(255, 255, 255, 0.6), inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
-    }
-    .dialog-btn:active {
-      transform: scale(0.95);
-    }
+/* เอฟเฟกต์เมื่อชี้เมาส์ที่เมนูแต่ละหัวข้อ (เรืองแสงสีฟ้าอ่อนแบบ macOS) */
+.menu-item:hover {
+  background: rgba(55, 146, 237, 0.85);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(55, 146, 237, 0.6);
+}
 
-    /* Main Preview Smooth Transition */
-    #main-preview {
-      transition: background 0.3s ease, opacity 0.2s ease;
-    }
-  </style>
-</head>
-<body style="margin: 0; padding: 20px 0; background: #2b2b2b;">
+.menu-divider {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.10);
+  margin: 5px 0px;
+}
 
-  <div style="width: 750px; margin: auto;"> 
-    
-    <!-- Context Menu Widget (ตำแหน่ง transform ตามโค้ดเดิม) -->
-    <div style="width:250px; min-height:300px; background:linear-gradient(135deg, rgb(219 219 219 / 85%), rgb(235 235 235 / 87%)); backdrop-filter:blur(10px); border:1px solid rgba(255, 255, 255, 0.2);border-radius: 10px; box-shadow:1px -1px 0px 0px rgb(203 203 203 / 29%);padding:5px 0px; margin:auto; transform:translate(3rem, 19rem); position:absolute; color: #0c0c0c; font-family:'Bai Jamjuree',sans-serif; font-size:10px;"> 
-      <div class="menu-item-interactive">Open Open With</div> 
-      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
-      <div class="menu-item-interactive">Move to Trash</div> 
-      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
-      <div>
-        <div class="menu-item-interactive">Get Info</div>
-        <div class="menu-item-interactive">Compress “MDXY-LoV-Raccoon.jpg”</div>
-        <div class="menu-item-interactive">Burn “MDXY-LoV-Raccoon.jpg” to Disc…</div>
-        <div class="menu-item-interactive">Duplicate</div>
-        <div class="menu-item-interactive">Make Alias</div>
-        <div class="menu-item-interactive">Quick Look “MDXY-LoV-Raccoon.jpg”</div>
-        <div class="menu-item-interactive">Share</div>
-      </div> 
-      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
-      <div class="menu-item-interactive">Copy “MDXY-LoV-Raccoon.jpg”</div> 
-      <div class="menu-item-interactive">Clean Up Selection Show View Options</div> 
-      <div style="border: none; height: 1px; background: rgba(0, 0, 0, 0.10); margin: 6px 1px 5px;"></div> 
-      <div style="padding-left: 15px;">Tags… 
-        <div style="display: flex; flex-direction: row; gap: 8px; justify-content: flex-start; padding: 5px 0;"> 
-          <div class="tag-dot-item" style="background-color: #FF5953; color: #FF5953;"></div> 
-          <div class="tag-dot-item" style="background-color: #FFB94C; color: #FFB94C;"></div> 
-          <div class="tag-dot-item" style="background-color: #FFD94C; color: #FFD94C;"></div> 
-          <div class="tag-dot-item" style="background-color: #75E259; color: #75E259;"></div> 
-          <div class="tag-dot-item" style="background-color: #59C5FF; color: #59C5FF;"></div> 
-          <div class="tag-dot-item" style="background-color: #C759FF; color: #C759FF;"></div> 
-          <div class="tag-dot-item" style="background-color: #C7C7C7; color: #C7C7C7;"></div> 
-        </div> 
-        <div class="menu-item-interactive" style="padding-left: 0;">Reveal in Finder</div>
-      </div> 
-    </div>
+#tag-dots {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: flex-start;
+  padding: 5px 0;
+}
 
-    <!-- Main Finder Window -->
-    <div style="width: 500px; height: 500px; background: linear-gradient(135deg, rgb(219 219 219), rgb(235 235 235)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 5px 0px 10px; margin: 50px auto 200px; font-family: 'Bai Jamjuree', sans-serif;"> 
-      <div style="max-width: 490px; height: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; flex-direction: row; margin: auto;"> 
-        <div style="width: 100px; height: 30px; display: flex; align-items: center;"> 
-          <div class="traffic-dot" style="background: #d12828; color: #d12828;"></div> 
-          <div class="traffic-dot" style="background: #e2bd30; color: #e2bd30;"></div> 
-          <div class="traffic-dot" style="background: #24c620; color: #24c620;"></div> 
-        </div> 
-        <div style="width: 355px; font-weight: 700; font-style: normal; text-transform: uppercase; font-size: 23px; text-align: center; line-height: 1; color: #424242;">Delphinus M. Quartier</div> 
-      </div> 
-      <div style="max-width: 98%; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: space-around; margin: 20px auto 0px;"> 
-        <div style="max-width: 100px; height: 430px; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: center;"> 
-          
-          <!-- Thumb 1 -->
-          <div class="thumb-box" 
-               onclick="changePreview('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg', '70% 100% / 150%')"
-               style="width: 90px; height: 130px; margin: 0px auto 10px; box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3; background: url(https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg) 70% 100% / 150%; display: block;"></div> 
-          
-          <!-- Thumb 2 -->
-          <div class="thumb-box" 
-               onclick="changePreview('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg', '60% 40% / 130%')"
-               style="width: 90px; height: 130px; margin: 10px auto; box-shadow: 0px 0px 0px 2px #fafafa; background: url(https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg) 60% 40% / 130%;"></div> 
-          
-          <!-- Thumb 3 -->
-          <div class="thumb-box" 
-               onclick="changePreview('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg', '50% 50% / cover')"
-               style="width: 90px; height: 130px; margin: 10px auto; box-shadow: 0px 0px 0px 2px #fafafa; background: url(https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg) 50% 50% / cover;"></div> 
-        </div> 
+.tag-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
 
-        <!-- Main Preview -->
-        <div id="main-preview" style="width: 300px; height: 430px; margin-left: 30px; box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3; background: url(https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg) 70% 100% / 150%;"></div> 
-      </div>
-    </div>
+.tag-dot:hover {
+  transform: scale(1.2);
+}
 
-    <!-- Floating Icon (ตำแหน่ง transform ตามโค้ดเดิม) -->
-    <div style="width: 80px; height: 80px; background: url(https://iili.io/KePFD1R.png) center / 80% no-repeat, linear-gradient(135deg, rgb(0 0 0 / 64%), rgb(42 42 42)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%); margin: 20px auto 0px; transform: translate(-15.5rem, -29rem);"></div> 
+#dot-red    { background-color: #FF5953; }
+#dot-orange { background-color: #FFB94C; }
+#dot-yellow { background-color: #FFD94C; }
+#dot-green  { background-color: #75E259; }
+#dot-blue   { background-color: #59C5FF; }
+#dot-purple { background-color: #C759FF; }
+#dot-gray   { background-color: #C7C7C7; }
 
-    <!-- Mini Player Widget (ตำแหน่ง transform ตามโค้ดเดิม) -->
-    <div style="width: 150px; min-height: 200px; background: linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%); margin: auto; transform: translate(17rem, -33rem); font-family: 'Bai Jamjuree', sans-serif;"> 
-      <div style="max-width: 130px; height: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; flex-direction: row; margin: auto;"> 
-        <div style="width: 35px; height: 10px; display: flex; align-items: center;"> 
-          <div style="width: 8px; height: 8px; background: #d12828; border-radius: 100px; margin: auto; display: inline-block;"></div> 
-          <div style="width: 8px; height: 8px; background: #e2bd30; border-radius: 100px; margin: auto; display: inline-block;"></div> 
-          <div style="width: 8px; height: 8px; background: #24c620; border-radius: 100px; margin: auto; display: inline-block;"></div> 
-        </div> 
-        <div style="width: 100px; font-weight: 700; font-style: normal; text-transform: uppercase; font-size: 7px; line-height: 1; color: #424242; margin-left: 20px;">MINIPLAY</div> 
-      </div> 
-      <div style="width: 130px; height: 130px; margin: 0px auto; background: url(https://i.pinimg.com/736x/9e/61/5c/9e615c4cb2ac46fc47e3f5d1af0b4f55.jpg) 50% 50% / cover;"></div> 
-      <div style="width: 100px; font-weight: 500; font-style: normal; text-align: center; font-size: 7px; line-height: 1; color: #424242; margin: 5px auto 0px;">BOYNEXTDOOR - I Feel Good</div> 
-      <div style="width: 130px; height: 35px; margin: 0px auto; background: url(https://iili.io/KeiGAlf.png) 50% 50% / cover;"></div> 
-    </div> 
+#dot-red:hover    { box-shadow: 0 0 8px #FF5953; }
+#dot-orange:hover { box-shadow: 0 0 8px #FFB94C; }
+#dot-yellow:hover { box-shadow: 0 0 8px #FFD94C; }
+#dot-green:hover  { box-shadow: 0 0 8px #75E259; }
+#dot-blue:hover   { box-shadow: 0 0 8px #59C5FF; }
+#dot-purple:hover { box-shadow: 0 0 8px #C759FF; }
+#dot-gray:hover   { box-shadow: 0 0 8px #C7C7C7; }
 
-    <!-- Dialog Box Widget (ตำแหน่ง transform ตามโค้ดเดิม) -->
-    <div style="width: 250px; min-height: 230px; background: linear-gradient(135deg, rgb(219 219 219 / 64%), rgb(235 235 235)); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; box-shadow: 1px -1px 0px 0px rgb(203 203 203 / 29%); margin: auto; padding-bottom: 20px; transform: translate(13rem, -30rem); font-family: 'Bai Jamjuree', sans-serif;"> 
-      <div style="width: 70px; height: 70px; margin: 20px auto 10px; box-shadow: -1px 3px 6px 2px #6a6969; border: 5px solid #ffffff; border-radius: 20px; background: url(https://i.pinimg.com/736x/51/27/cb/5127cb71d8db89b7cc931cd9bc6db913.jpg) 50% 50% / cover;"></div> 
-      <div style="font-size: 12px; color: #3e3e3e; font-weight: bold; margin: 5px auto; text-align: center;">Is that you, raccoon boy?</div> 
-      <div style="color: #0c0c0c; font-size: 10px; text-align: justify; padding: 0px 10px; margin: auto;">The young raccoon arrived at the lake and shouted loudly, “Hey! Is there anyone there? Where are you? Are you in the lake? Come out at once! Let me see you!</div> 
-      
-      <div class="dialog-btn btn-blue">Yes, that's me!</div> 
-      <div class="dialog-btn btn-gray">Give me all your money!</div> 
-    </div> 
+/* ---------------- Main Finder Window ---------------- */
+#main-window {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, rgb(219, 219, 219), rgb(235, 235, 235));
+  padding: 5px 0px 10px;
+  margin: 50px auto 200px;
+}
 
-  </div>
+#window-header {
+  max-width: 490px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: auto;
+}
 
-  <!-- JavaScript สลับรูปเมื่อคลิก Thumb -->
-  <script>
-    function changePreview(bgUrl, bgStyle) {
-      const preview = document.getElementById('main-preview');
-      preview.style.opacity = '0.3';
-      setTimeout(() => {
-        preview.style.background = `url(${bgUrl}) ${bgStyle}`;
-        preview.style.opacity = '1';
-      }, 150);
-    }
-  </script>
-</body>
-</html>
+#traffic-lights {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.light {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  margin: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.light:hover {
+  transform: scale(1.15);
+}
+
+.light-close { background: #d12828; }
+.light-min   { background: #e2bd30; }
+.light-max   { background: #24c620; }
+
+.light-close:hover { box-shadow: 0 0 10px rgba(209, 40, 40, 0.8); }
+.light-min:hover   { box-shadow: 0 0 10px rgba(226, 189, 48, 0.8); }
+.light-max:hover   { box-shadow: 0 0 10px rgba(36, 198, 32, 0.8); }
+
+#window-title {
+  width: 355px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 23px;
+  text-align: center;
+  line-height: 1;
+  color: #424242;
+}
+
+#window-body {
+  max-width: 98%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 20px auto 0px;
+}
+
+#thumbnail-column {
+  max-width: 100px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.thumb-item {
+  width: 90px;
+  height: 130px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 0px 2px #fafafa;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.thumb-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 12px rgba(255, 255, 255, 0.9);
+}
+
+#thumb-1 {
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
+  background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+  cursor: pointer;
+}
+
+#thumb-1:hover {
+  box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3, 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+#thumb-2 {
+  background: url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%;
+}
+
+#thumb-3 {
+  background: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
+}
+
+#main-preview {
+  width: 300px;
+  height: 430px;
+  margin-left: 30px;
+  box-shadow: -25px 0px 0px 14px #a3a3a3, 9px 0px 0px 14px #a3a3a3;
+  background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
+}
+
+/* ---------------- Floating Widget ---------------- */
+#floating-icon {
+  width: 80px;
+  height: 80px;
+  background: url('https://iili.io/KePFD1R.png') center / 80% no-repeat, linear-gradient(135deg, rgba(0, 0, 0, 0.64), rgb(42, 42, 42));
+  margin: 20px auto 0px;
+  transform: translate(-15.5rem, -39rem);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#floating-icon:hover {
+  transform: translate(-15.5rem, -39rem) scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 1px -1px 0px 0px rgba(203, 203, 203, 0.29);
+}
+
+/* ---------------- Mini Player Widget ---------------- */
+#mini-player {
+  width: 150px;
+  min-height: 200px;
+  background: linear-gradient(135deg, rgba(219, 219, 219, 0.64), rgb(235, 235, 235));
+  margin: auto;
+  transform: translate(17rem, -45rem);
+}
+
+#player-header {
+  max-width: 130px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: auto;
+}
+
+#player-controls {
+  width: 35px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.player-btn {
+  width: 8px;
+  height: 8px;
+  border-radius: 100px;
+  margin: auto;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.player-btn:hover {
+  transform: scale(1.3);
+}
+
+#player-title {
+  width: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 7px;
+  line-height: 1;
+  color: #424242;
+  margin-left: 20px;
+}
+
+#album-art {
+  width: 130px;
+  height: 130px;
+  margin: 0px auto;
+  background: url('https://i.pinimg.com/736x/9e/61/5c/9e615c4cb2ac46fc47e3f5d1af0b4f55.jpg') 50% 50% / cover;
+}
+
+#song-title {
+  width: 100px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 7px;
+  line-height: 1;
+  color: #424242;
+  margin: 5px auto 0px;
+}
+
+#player-wave {
+  width: 130px;
+  height: 35px;
+  margin: 0px auto;
+  background: url('https://iili.io/KeiGAlf.png') 50% 50% / cover;
+}
+
+/* ---------------- Dialog Box Widget ---------------- */
+#dialog-box {
+  width: 250px;
+  min-height: 230px;
+  background: linear-gradient(135deg, rgba(219, 219, 219, 0.64), rgb(235, 235, 235));
+  margin: auto;
+  padding-bottom: 20px;
+  transform: translate(13rem, -40rem);
+}
+
+#avatar {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto 10px;
+  box-shadow: -1px 3px 6px 2px #6a6969;
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+  background: url('https://i.pinimg.com/736x/51/27/cb/5127cb71d8db89b7cc931cd9bc6db913.jpg') 50% 50% / cover;
+}
+
+#dialog-heading {
+  font-size: 12px;
+  color: #3e3e3e;
+  font-weight: bold;
+  margin: 5px auto;
+  text-align: center;
+}
+
+#dialog-text {
+  color: #0c0c0c;
+  font-size: 10px;
+  text-align: justify;
+  padding: 0px 10px;
+  margin: auto;
+}
+
+/* ---------------- Main Buttons (Glow Effect) ---------------- */
+.btn {
+  width: 160px;
+  height: 15px;
+  border-radius: 5px;
+  padding: 5px 15px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 10px auto;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-primary {
+  background-color: rgba(55, 146, 237, 0.84);
+  box-shadow: inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
+  color: #ffffff;
+}
+
+/* ปุ่มสีฟ้า: ชี้แล้วเรืองแสงสีฟ้าอ่อน + สว่างขึ้น */
+#btn-primary:hover {
+  background-color: rgba(55, 146, 237, 1);
+  box-shadow: 0 0 12px rgba(55, 146, 237, 0.8), inset 0px -3px 6px 0px rgba(25, 72, 131, 0.39);
+  transform: translateY(-1px);
+}
+
+#btn-secondary {
+  background-color: rgba(131, 131, 131, 0.60);
+  box-shadow: inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
+  color: #ffffff;
+}
+
+/* ปุ่มสีเทา: ชี้แล้วเรืองแสงสีขาวนวล + สว่างขึ้น */
+#btn-secondary:hover {
+  background-color: rgba(160, 160, 160, 0.85);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6), inset 0px -3px 6px 0px rgba(80, 80, 80, 0.34);
+  transform: translateY(-1px);
+}
