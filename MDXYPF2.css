@@ -19,33 +19,39 @@
 /* ---------------- Context Menu ---------------- */
 #context-menu {
   width: 250px;
-  min-height: 300px;
+  min-height: auto;
   background: linear-gradient(135deg, rgba(219, 219, 219, 0.85), rgba(235, 235, 235, 0.87));
   border-radius: 10px;
-  padding: 5px 0px;
+  padding: 6px 0px;
   margin: auto;
   transform: translate(3rem, 19rem);
   position: absolute;
   color: #0c0c0c;
-  font-size: 10px;
+  font-size: 11px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .menu-item {
-  padding-left: 15px;
-  line-height: 1.6;
+  padding: 4px 15px;
+  line-height: 1.4;
+  cursor: pointer;
   transition: all 0.2s ease;
+  border-radius: 4px;
+  margin: 1px 4px;
 }
 
+/* เอฟเฟกต์เมื่อชี้เมาส์ที่เมนูแต่ละหัวข้อ (เรืองแสงสีฟ้าอ่อนแบบ macOS) */
 .menu-item:hover {
-  background: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
+  background: rgba(55, 146, 237, 0.85);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(55, 146, 237, 0.6);
 }
 
 .menu-divider {
   border: none;
   height: 1px;
   background: rgba(0, 0, 0, 0.10);
-  margin: 6px 1px 5px;
+  margin: 5px 0px;
 }
 
 #tag-dots {
