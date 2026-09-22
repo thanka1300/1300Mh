@@ -2,7 +2,9 @@
 
 :root {
   --main-bg: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
-}
+  --thumb-2: url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%;
+  --thumb-3: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
+    }
 
 /* Main Container */
 #mac-wrapper {
@@ -198,11 +200,11 @@
 }
 
 #thumb-2 {
-  background: url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%;
+  background: var(--thumb-2);
 }
 
 #thumb-3 {
-  background: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
+  background: var(--thumb-3);
 }
 
 #main-preview {
@@ -392,7 +394,7 @@
 
 /* เมื่อเลือก Thumb 2 */
 #select-thumb-2:checked ~ #main-preview {
-  background: url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%;
+  background: var(--thumb-2);
 }
 #select-thumb-2:checked ~ #thumbnail-column #thumb-2 {
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
@@ -400,7 +402,7 @@
 
 /* เมื่อเลือก Thumb 3 */
 #select-thumb-3:checked ~ #main-preview {
-  background: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
+  background: var(--thumb-3);
 }
 #select-thumb-3:checked ~ #thumbnail-column #thumb-3 {
   box-shadow: 0px 0px 0px 2px #fafafa, 0px 0px 0px 8px #a3a3a3;
