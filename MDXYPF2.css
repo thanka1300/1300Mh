@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>macOS Style Interactive Interface</title>
+  <title>macOS Desktop Interface & Widget Setup</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
 
@@ -39,7 +40,7 @@
       padding: 40px 0;
     }
 
-    /* Glassmorphism Shared Class */
+    /* Glassmorphism Base Theme */
     .glass-panel {
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
@@ -58,6 +59,7 @@
       top: 40px;
       left: 10px;
       z-index: 50;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .menu-item {
@@ -74,7 +76,6 @@
       justify-content: space-between;
     }
 
-    /* Hover Glow & Active Press */
     .menu-item:hover {
       background: rgba(55, 146, 237, 0.88);
       color: #ffffff;
@@ -223,7 +224,7 @@
       margin: 0 auto;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transition: all 0.15s ease-out;
+      transition: all 0.2s ease-out;
       cursor: pointer;
     }
 
@@ -235,16 +236,14 @@
     .thumb-item:active {
       transform: scale(0.94) translateY(1px);
       filter: brightness(0.85);
-      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .thumb-item.active {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 6px #3792ed, 0 0 15px rgba(55, 146, 237, 0.8) !important;
     }
 
     #thumb-1 {
-      box-shadow: 0 0 0 2px #ffffff, 0 0 0 6px #a3a3a3;
       background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
-    }
-
-    #thumb-1:hover {
-      box-shadow: 0 0 0 2px #ffffff, 0 0 0 6px #3792ed, 0 0 15px rgba(55, 146, 237, 0.8);
     }
 
     #thumb-2 {
@@ -255,6 +254,7 @@
       background: url('https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg') 50% 50% / cover;
     }
 
+    /* Main Preview Screen */
     #main-preview {
       width: 300px;
       height: 420px;
@@ -262,7 +262,18 @@
       border-radius: 8px;
       box-shadow: -20px 0 0 12px #a3a3a3, 8px 0 0 12px #a3a3a3, 0 10px 25px rgba(0,0,0,0.2);
       background: url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%;
-      transition: all 0.3s ease-out;
+      transition: background 0.3s ease, opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: zoom-in;
+    }
+
+    #main-preview:hover {
+      transform: scale(1.02);
+      box-shadow: -20px 0 0 12px #a3a3a3, 8px 0 0 12px #a3a3a3, 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+
+    #main-preview:active {
+      transform: scale(0.98);
+      filter: brightness(0.9);
     }
 
     /* ---------------- Floating Icon Widget ---------------- */
@@ -350,11 +361,12 @@
     }
 
     #album-art:hover {
-      transform: scale(1.03);
+      transform: scale(1.04);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
     }
 
     #album-art:active {
-      transform: scale(0.96);
+      transform: scale(0.95);
       filter: brightness(0.85);
     }
 
@@ -443,7 +455,6 @@
       transition: all 0.15s ease-out;
     }
 
-    /* Primary Button */
     #btn-primary {
       background-color: rgba(55, 146, 237, 0.88);
       box-shadow: inset 0 -2px 4px rgba(25, 72, 131, 0.4), 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -462,7 +473,6 @@
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
     }
 
-    /* Secondary Button */
     #btn-secondary {
       background-color: rgba(140, 140, 140, 0.65);
       box-shadow: inset 0 -2px 4px rgba(60, 60, 60, 0.3), 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -479,6 +489,78 @@
       transform: translateY(1px) scale(0.96);
       background-color: rgba(100, 100, 100, 0.9);
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ---------------- Image Zoom Modal ---------------- */
+    #image-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    #image-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #modal-content {
+      position: relative;
+      max-width: 85vw;
+      max-height: 85vh;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.2);
+      transform: scale(0.9);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    #image-modal.open #modal-content {
+      transform: scale(1);
+    }
+
+    #modal-img {
+      display: block;
+      max-width: 85vw;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    #modal-close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 32px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    #modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.45);
+      transform: scale(1.15);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+    }
+
+    #modal-close-btn:active {
+      transform: scale(0.9);
     }
   </style>
 </head>
@@ -518,7 +600,7 @@
       <div class="menu-item">Reveal in Finder</div>
     </div>
 
-    <!-- Main Window Widget -->
+    <!-- Main Finder Window Widget -->
     <div id="main-window" class="glass-panel">
       <div id="window-header">
         <div id="traffic-lights">
@@ -530,11 +612,22 @@
       </div>
       <div id="window-body">
         <div id="thumbnail-column">
-          <div id="thumb-1" class="thumb-item"></div>
-          <div id="thumb-2" class="thumb-item"></div>
-          <div id="thumb-3" class="thumb-item"></div>
+          <div id="thumb-1" class="thumb-item active" 
+               data-bg="https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg" 
+               data-position="70% 100% / 150%"
+               onclick="changePreview(this)"></div>
+
+          <div id="thumb-2" class="thumb-item" 
+               data-bg="https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg" 
+               data-position="60% 40% / 130%"
+               onclick="changePreview(this)"></div>
+
+          <div id="thumb-3" class="thumb-item" 
+               data-bg="https://i.pinimg.com/1200x/d3/71/56/d37156f1435fe5c064b33d0b4e622929.jpg" 
+               data-position="50% 50% / cover"
+               onclick="changePreview(this)"></div>
         </div>
-        <div id="main-preview"></div>
+        <div id="main-preview" onclick="openZoomModal()"></div>
       </div>
     </div>
 
@@ -569,25 +662,62 @@
 
   </div>
 
+  <!-- Fullscreen Image Zoom Modal Popup -->
+  <div id="image-modal" onclick="closeZoomModal(event)">
+    <div id="modal-close-btn" onclick="closeZoomModal(event)">✕</div>
+    <div id="modal-content" onclick="event.stopPropagation()">
+      <img id="modal-img" src="" alt="Full Preview">
+    </div>
+  </div>
+
   <script>
-    // Interactivity: Switch main preview picture when clicking thumbnails
-    const preview = document.getElementById('main-preview');
-    const thumb1 = document.getElementById('thumb-1');
-    const thumb2 = document.getElementById('thumb-2');
-    const thumb3 = document.getElementById('thumb-3');
+    // Current Active Image State Tracker
+    let currentActiveImgUrl = 'https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg';
 
-    const setPreview = (url, activeThumb) => {
-      preview.style.backgroundImage = url;
-      [thumb1, thumb2, thumb3].forEach(t => {
-        t.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.15)';
+    // Dynamic Thumbnail Selection & Smooth Preview Fade Switcher
+    function changePreview(element) {
+      const mainPreview = document.getElementById('main-preview');
+      const bgUrl = element.getAttribute('data-bg');
+      const bgPos = element.getAttribute('data-position') || '50% 50% / cover';
+
+      currentActiveImgUrl = bgUrl;
+
+      // Soft transition fade effect
+      mainPreview.style.opacity = '0.3';
+
+      setTimeout(() => {
+        mainPreview.style.background = `url('${bgUrl}') ${bgPos}`;
+        mainPreview.style.opacity = '1';
+      }, 150);
+
+      // Active Thumbnail Border Highlight Update
+      document.querySelectorAll('.thumb-item').forEach(thumb => {
+        thumb.classList.remove('active');
       });
-      activeThumb.style.boxShadow = '0 0 0 2px #ffffff, 0 0 0 6px #3792ed, 0 0 15px rgba(55, 146, 237, 0.8)';
-    };
+      element.classList.add('active');
+    }
 
-    thumb1.addEventListener('click', () => {
-      setPreview("url('https://i.pinimg.com/736x/46/83/76/468376d8317ac016c461ff5d0a18c454.jpg') 70% 100% / 150%", thumb1);
-    });
+    // Modal Popup Controls for Image Zoom Effect
+    function openZoomModal() {
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
 
-    thumb2.addEventListener('click', () => {
-      setPreview("url('https://i.pinimg.com/736x/10/4a/7b/104a7b3c4d2dacaead84f6c7996ae9e4.jpg') 60% 40% / 130%", thumb2);
+      modalImg.src = currentActiveImgUrl;
+      modal.classList.add('open');
+    }
+
+    function closeZoomModal(event) {
+      if (event) event.stopPropagation();
+      const modal = document.getElementById('image-modal');
+      modal.classList.remove('open');
+    }
+
+    // ESC Key listener to close zoom modal
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeZoomModal();
+      }
     });
+  </script>
+</body>
+</html>
