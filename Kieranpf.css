@@ -4,8 +4,6 @@
   position: relative;
   width: 600px;
   height: 850px;
-  background: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.3)),
-              url('https://pbs.twimg.com/media/G907eSabsAEDkAe?format=jpg&name=4096x4096') 90% 15% / 280%;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -129,18 +127,15 @@
 
 .img-1 {
   height: 220px;
-  background: url('https://pbs.twimg.com/media/G907eSaaMAE4Rdh?format=jpg&name=4096x4096') center / cover no-repeat;
   margin-top: 20px;
 }
 
 .img-2 {
   height: 130px;
-  background: url('https://pbs.twimg.com/media/G907eSYb0AEvqTY?format=jpg&name=4096x4096') 50% 10% / 300% no-repeat;
 }
 
 .img-3 {
   height: 130px;
-  background: url('https://pbs.twimg.com/media/G907eShbIAEWie9?format=jpg&name=4096x4096') 60% 24% / 320% no-repeat;
 }
 
 .mode-title {
