@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 :root {
   --dark: #222222;
   --bg: #fefbea;
@@ -15,8 +17,8 @@
   max-width: 800px;
   height: 230px;
   background: var(--dark);
-  mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
-  -webkit-mask: url(https://iili.io/BtoRG5u.png) center/contain no-repeat;
+  mask: url(https://iili.io/nOtLl7j.png) center/contain no-repeat;
+  -webkit-mask: url(https://iili.io/nOtLl7j.png) center/contain no-repeat;
   margin: auto;
   position: sticky;
 }
