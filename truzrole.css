@@ -169,6 +169,6 @@
 .TruzDot {
   width: 6px;
   height: 6px;
-  background-color: var(--text-dark);
+  background-color: var(--text);
   border-radius: 50%;
 }
