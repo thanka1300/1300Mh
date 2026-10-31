@@ -6,8 +6,8 @@
   --shadow-color: #5a2435;
   --bg-card: #ffffff;
   --text-dark: #000000;
-  --border-dark: #000000;
-  --white: #ffffff;
+  --borderNote: #000000;
+  --Paper: #ffffff;
 }
 
 .TruzWrapper {
@@ -28,7 +28,6 @@
 }
 
 .TruzBanner {
-  background: url(https://i.pinimg.com/736x/eb/7c/6b/eb7c6bc2369fe1540f5e6f750120d93f.jpg) center/cover;
   height: 250px;
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
@@ -40,14 +39,13 @@
 .TruzBannerDot {
   width: 12px;
   height: 12px;
-  background-color: var(--primary-color);
+  background-color: var(--Paper);
   border-radius: 50%;
 }
 
 .TruzAvatar {
   width: 200px;
   height: 200px;
-  background: url(https://i.pinimg.com/736x/e6/59/06/e65906653319e458df73d951eb5434a9.jpg) center/cover;
   border: 5px solid var(--primary-color);
   border-radius: 25px;
   margin: -180px auto 0 auto;
@@ -105,7 +103,7 @@
   font-style: normal;
 }
 
-.TruzBio {
+.TruzRole {
   text-align: justify;
   font-size: 16px;
   line-height: 1.8;
@@ -127,7 +125,7 @@
   flex: 1;
   height: 50px;
   background-color: var(--primary-color);
-  border: 3px solid var(--border-dark);
+  border: 3px solid var(--borderNote);
   border-radius: 12px;
   cursor: pointer;
   display: flex;
@@ -143,7 +141,7 @@
 }
 
 .TruzPlusIcon {
-  color: var(--white);
+  color: var(--Paper);
   font-size: 28px;
   font-weight: bold;
   line-height: 1;
@@ -153,7 +151,7 @@
   width: 50px;
   height: 50px;
   background-color: var(--bg-card);
-  border: 3px solid var(--border-dark);
+  border: 3px solid var(--borderNote);
   border-radius: 12px;
   cursor: pointer;
   display: flex;
