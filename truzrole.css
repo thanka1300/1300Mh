@@ -1,0 +1,172 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #ff4b82;
+  --shadow-color: #5a2435;
+  --bg-card: #ffffff;
+  --text-dark: #000000;
+  --border-dark: #000000;
+  --white: #ffffff;
+}
+
+.TruzWrapper {
+  padding: 15px;
+}
+
+.TruzCard {
+  max-width: 700px;
+  background-color: var(--bg-card);
+  border: 5px solid var(--primary-color);
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  position: relative;
+  padding-bottom: 25px;
+  margin: 20px auto;
+  box-shadow: 15px 15px 0px var(--shadow-color);
+}
+
+.TruzBanner {
+  background: url(https://i.pinimg.com/736x/eb/7c/6b/eb7c6bc2369fe1540f5e6f750120d93f.jpg) center/cover;
+  height: 250px;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 6px;
+}
+
+.TruzBannerDot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.TruzAvatar {
+  width: 200px;
+  height: 200px;
+  background: url(https://i.pinimg.com/736x/e6/59/06/e65906653319e458df73d951eb5434a9.jpg) center/cover;
+  border: 5px solid var(--primary-color);
+  border-radius: 25px;
+  margin: -180px auto 0 auto;
+  position: relative;
+  box-shadow: 10px 10px 0px var(--shadow-color);
+}
+
+.TruzBody {
+  padding: 10px 25px 0;
+  text-align: center;
+}
+
+.TruzNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 25px;
+  gap: 10px;
+}
+
+.TruzName {
+  margin-top: 10px;
+  font-size: 30px;
+  color: var(--text-dark);
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.TruzBadge {
+  width: 25px;
+  height: 25px;
+  background-color: var(--primary-color);
+  border: 3px solid var(--border-dark);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 3px 3px 0px var(--shadow-color);
+  margin-top: 5px;
+}
+
+.TruzUsername {
+  color: var(--primary-color);
+  font-size: 14px;
+  margin-top: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.TruzBio {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-top: 20px;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.TruzActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.TruzBtnMain {
+  flex: 1;
+  height: 50px;
+  background-color: var(--primary-color);
+  border: 3px solid var(--border-dark);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 0px var(--shadow-color);
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.TruzPlusIcon {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.TruzBtnMore {
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-card);
+  border: 3px solid var(--border-dark);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 0px var(--shadow-color);
+}
+
+.TruzDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-dark);
+  border-radius: 50%;
+}
