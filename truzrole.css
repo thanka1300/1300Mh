@@ -125,7 +125,7 @@
 
 .TruzBtnMain {
   flex: 1;
-  height: 50px;
+  min-height: 50px;
   background-color: var(--primary-color);
   border: 3px solid var(--borderNote);
   border-radius: 12px;
@@ -133,7 +133,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 5px 15px;
   box-sizing: border-box;
   box-shadow: 5px 5px 0px var(--shadow-color);
   color: var(--TextNote);
