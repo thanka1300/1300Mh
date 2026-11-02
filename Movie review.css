@@ -29,12 +29,14 @@
   color: #d5b18a;
   font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .c-sub {
   color: #858585;
   font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .c-video {
@@ -77,6 +79,7 @@
 .c-tag {
   color: #d5b18a;
   font-size: 11px;
+  text-transform: uppercase;
 }
 
 .c-m-title {
@@ -123,6 +126,7 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .c-text {
@@ -147,6 +151,7 @@
 .c-stills-sub {
   font-size: 13px;
   color: #d5b18a;
+  text-transform: uppercase;
 }
 
 .c-grid {
